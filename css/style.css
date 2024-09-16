@@ -1,0 +1,6804 @@
+/* Сброс стилей */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*подключение шрифтов*/
+@font-face {
+    font-family: 'Arkhip';
+    src: url('../fonts/arkhip.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/arkhip.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('../fonts/arkhip.eot'),
+        /* IE 9 Compatibility Mode */
+        url('../fonts/arkhip.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('../fonts/arkhip.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/arkhip.svg#arkhip') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+
+* {
+    /*типографика*/
+    font-family: 'Arkhip';
+    color: #2d2c2a;
+    cursor: default;
+    scroll-behavior: smooth;
+}
+
+/* ссылки */
+a {
+    /*без подчеркивания*/
+    text-decoration: none;
+}
+
+#teachers,
+#about,
+#courses,
+#faq,
+#contacts {
+    padding-top: 50px;
+    margin-top: -50px;
+}
+
+#club {
+    padding-top: 120px;
+    margin-top: -120px;
+}
+
+
+/* Ш А П К А */
+
+/* шапка главной страницы */
+.main-page__header {
+    /*позиционирование*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    /*ширина*/
+    width: 100%;
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание по горизонтали*/
+    justify-content: space-around;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    flex-wrap: wrap;
+    /*высота*/
+    height: 60px;
+    /*цвет текста*/
+    color: #862d38;
+    /*шрифт*/
+    font-family: 'Arkhip';
+    /*размер текста*/
+    font-size: 20px;
+    /*толщина шрифта*/
+    font-weight: 400;
+    /*цвет фона*/
+    background-color: #fbf8f7;
+    /*тень*/
+    box-shadow: 0 10px 30px #2d2c2a10;
+}
+
+/* блок с ссылками в шапке на главной странице */
+.main-page__header_links-block {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 30px;
+}
+
+/* ссылки в шапке главной страницы */
+.main-page__header_link {
+    /*цвет текста*/
+    color: #862d38;
+    /*курсор*/
+    cursor: pointer;
+    transition: all 0.8s;
+}
+
+/* ссылки в шапке главной страницы */
+.main-page__header_link:hover {
+    /*цвет текста*/
+    color: #6c1621;
+}
+
+/* логотип в шапке главной страницы */
+.main-page__header_logotype {
+    /*размер текста*/
+    font-size: 45px;
+}
+
+
+
+.main-page__header_button {
+    width: 40px;
+    height: 40px;
+
+    background-color: #fbf8f7;
+    background-image: url(../assets/head-btn-open.png);
+    /*позиция фоновой картинки*/
+    background-position: 50% 58%;
+    /*размер фоновой картинки*/
+    background-size: cover;
+    /*повторение фоновой картинки*/
+    background-repeat: no-repeat;
+    border: none;
+    transition: all 0.8s;
+}
+
+.main-page__header_button-close {
+    background-image: url(../assets/head-btn-close.png);
+    transition: all 0.8s;
+}
+
+.main-page__header_button-none {
+    display: none;
+}
+
+
+.main-page__header_links-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 3% 0;
+
+    background-color: #fbf8f7;
+}
+
+.main-page__header_link-mobile {
+    font-size: 24px;
+
+    color: #862d38;
+}
+
+.main-page__header_links-mobile-none {
+    display: none;
+}
+
+
+
+
+
+/* П Р О М О - Б Л О К */
+
+.main-page__promo {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-items: center;
+    /*высота*/
+    height: 100vh;
+    /*цвет текста*/
+    color: #fbf8f7;
+    /*выраванивание текста по центру*/
+    text-align: center;
+    /*цвет фона*/
+    background-color: #d2e3ea;
+    background:
+        /*градиент на фоновой картинке*/
+        linear-gradient(to bottom, #2d2c2a30, #2d2c2a30),
+        /*задний фон - картинка*/
+        url(../assets/promo-bg.jpg);
+    /*позиция фоновой картинки*/
+    background-position: 50% 58%;
+    /*размер фоновой картинки*/
+    background-size: cover;
+    /*повторение фоновой картинки*/
+    background-repeat: no-repeat;
+
+    /* эффект при скролле */
+    background-attachment: fixed;
+
+}
+
+.main-page__promo_titles-block {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*внешний отступ сверху*/
+    margin-top: 20vh;
+}
+
+.main-page__promo_main-h1 {
+    /*размер текста*/
+    font-size: 80px;
+    /*начертание текста*/
+    font-weight: bold;
+    color: #fbf8f7;
+}
+
+.main-page__promo_main-h2 {
+    /*размер текста*/
+    font-size: 60px;
+    color: #fbf8f7;
+}
+
+.main-page__promo_main-h5 {
+    /*внешний отступ сверху*/
+    margin-top: 2%;
+    /*ширина*/
+    width: 600px;
+    /*размер текста*/
+    font-size: 20px;
+    /*межстрочный интервал*/
+    line-height: 1.5;
+    color: #fbf8f7;
+}
+
+.main-page__promo_buttons-block {
+    /*флекс-контейнер*/
+    display: inline-flex;
+    /*перенос элементов*/
+    flex-wrap: wrap;
+    /*расстояние между элементами*/
+    gap: 30px;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*внешний отступ сверху*/
+    margin-top: 10%;
+
+}
+
+.main-page__promo_button-try-f-free {
+    /*ширина*/
+    width: 300px;
+    /*высота*/
+    height: 55px;
+    /*рамка*/
+    border: none;
+    /*скругление углов*/
+    border-radius: 10px;
+    /*цвет текста*/
+    color: #fbf8f7;
+    /*размер текста*/
+    font-size: 17px;
+    /*толщина шрифта*/
+    font-weight: bold;
+    /*выравнивание текста*/
+    text-align: center;
+    /*цвет фона*/
+    background-color: #862d38;
+    /*тень*/
+    box-shadow: 5px 5px #2D2C2A;
+
+    /*курсор*/
+    cursor: pointer;
+
+    /*анимация нажатия кнопки*/
+    -webkit-transition:
+        box-shadow 0.4s,
+        -webkit-transform 0.4s,
+        background-color 0.8s;
+    transition:
+        box-shadow 0.4s,
+        transform 0.4s,
+        background-color 0.8s;
+
+}
+
+.main-page__promo_button-more-abt-courses {
+    /*ширина*/
+    width: 250px;
+    /*высота*/
+    height: 55px;
+    /*рамка*/
+    border: none;
+    /*скругление углов*/
+    border-radius: 10px;
+    /*цвет текста*/
+    color: #862D38;
+    /*размер текста*/
+    font-size: 17px;
+    /*толщина шрифта*/
+    font-weight: bold;
+    /*выравнивание текста*/
+    text-align: center;
+    /*цвет фона*/
+    background-color: #F2E3E5;
+    /*тень*/
+    box-shadow: 5px 5px #2D2C2A;
+    /*курсор*/
+    cursor: pointer;
+
+    /*анимация нажатия кнопки*/
+    -webkit-transition:
+        box-shadow 0.4s,
+        -webkit-transform 0.4s,
+        background-color 0.8s;
+    transition:
+        box-shadow 0.4s,
+        transform 0.4s,
+        background-color 0.8s;
+}
+
+.main-page__promo_button-try-f-free:hover {
+    /*цвет фона*/
+    background-color: #74262F;
+}
+
+.main-page__promo_button-try-f-free:active {
+    /*цвет фона*/
+    background-color: #74262F;
+    /*тень*/
+    box-shadow: 0px 0px #2D2C2A;
+    -webkit-transform: translate(5px, 5px);
+    transform: translate(5px, 5px);
+    transition: 0.1s;
+}
+
+
+.main-page__promo_button-more-abt-courses:hover {
+    /*цвет фона*/
+    background-color: #FBF8F7;
+}
+
+.main-page__promo_button-more-abt-courses:active {
+    /*цвет фона*/
+    background-color: #FBF8F7;
+    /*тень*/
+    box-shadow: 0px 0px #2D2C2A;
+
+    -webkit-transform: translate(5px, 5px);
+    transform: translate(5px, 5px);
+    transition: 0.1s;
+
+}
+
+
+
+/* П Е Р С П Е К Т И В Ы  1 */
+
+.main-page__prospects-1 {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 30px;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*высота*/
+    height: 555px;
+    /*цвет фона*/
+    background-color: #fbf8f7;
+}
+
+.main-page__prospects-1_h3 {
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*размер текста*/
+    font-size: 45px;
+    /*начертание текста*/
+    font-weight: bold;
+    /*выравнивание текста*/
+    text-align: center;
+}
+
+.main-page__prospects-1_cards {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+}
+
+.main-page__prospects-1_card {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 20px;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по вертикали (горизонтали из-за column) */
+    align-items: center;
+    /*ширина*/
+    width: 320px;
+    /*высота*/
+    height: 350px;
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*размер текста*/
+    font-size: 17px;
+    /*выравнивание текста*/
+    text-align: center;
+    /*цвет фона*/
+    background-color: #d2e3ea;
+    /*тень*/
+    box-shadow: 5px 5px #2D2C2A;
+}
+
+/* анимация 1-ой карточки */
+.main-page__prospects-1_card-1_animation {
+    transform-origin: 50% 0;
+    transform: rotate(3deg);
+    animation: prospects-1_card-1_animation 1.2s linear;
+    animation-delay: 0s;
+}
+
+@keyframes prospects-1_card-1_animation {
+
+
+    0% {
+        transform-origin: 50% 0;
+        transform: rotate(3deg)
+    }
+
+    25% {
+        transform-origin: 50% 0;
+        transform: rotate(-3deg)
+    }
+
+    50% {
+        transform-origin: 50% 0;
+        transform: rotate(9deg)
+    }
+
+    100% {
+        transform-origin: 50% 0;
+        transform: rotate(3deg)
+    }
+
+}
+
+/*анимация 2-ой карточки*/
+.main-page__prospects-1_card-2_animation {
+    /*внешние отступы*/
+    margin: 30px 90px 0px 40px;
+    /*анимация*/
+    transform-origin: 50% 0;
+    transform: rotate(-3deg);
+    animation: prospects-1_card-2_animation 1.2s linear;
+    animation-delay: 0.4s;
+}
+
+@keyframes prospects-1_card-2_animation {
+
+
+    0% {
+        transform-origin: 50% 0;
+        transform: rotate(4deg)
+    }
+
+    25% {
+        transform-origin: 50% 0;
+        transform: rotate(-6deg)
+    }
+
+    50% {
+        transform-origin: 50% 0;
+        transform: rotate(4deg)
+    }
+
+    100% {
+        transform-origin: 50% 0;
+        transform: rotate(-3deg)
+    }
+
+}
+
+/*анимация 3-ей карточки*/
+.main-page__prospects-1_card-3_animation {
+    transform-origin: 50% 0;
+    transform: rotate(3deg);
+    animation: prospects-1_card-3_animation 1.2s linear;
+    animation-delay: 0.8s;
+}
+
+@keyframes prospects-1_card-3_animation {
+
+
+    0% {
+        transform-origin: 50% 0;
+        transform: rotate(7deg)
+    }
+
+    25% {
+        transform-origin: 50% 0;
+        transform: rotate(-3deg)
+    }
+
+    50% {
+        transform-origin: 50% 0;
+        transform: rotate(7deg)
+    }
+
+    100% {
+        transform-origin: 50% 0;
+        transform: rotate(3deg)
+    }
+
+}
+
+.main-page__prospects-1_cards-button {
+    /*ширина*/
+    width: 35px;
+    /*высота*/
+    height: 35px;
+    /*скругление углов*/
+    border-radius: 50%;
+    /*цвет фона*/
+    background-color: #f2e3e5;
+    /*тень*/
+    box-shadow: 3px 3px #2D2C2A;
+    /*внешний отступ сверху*/
+    margin-top: 15px;
+}
+
+.main-page__prospects-1_cards-title {
+    /*размер текста*/
+    font-size: 30px;
+    /*начертание текста*/
+    font-weight: bold;
+}
+
+.main-page__prospects-1_cards-description {
+    /*ширина*/
+    width: 90%;
+    /*размер текста*/
+    font-size: 17px;
+    /*межстрочный интервал*/
+    line-height: 1.5;
+}
+
+
+
+
+
+/* П Е Р С П Е К Т И В Ы  2 */
+
+.main-page__prospects-2 {
+    /*позиционирование*/
+    position: relative;
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-items: center;
+    /*высота*/
+    height: 760px;
+    /*цвет текста*/
+    color: #fbf8f7;
+    /*выраванивание текста по центру*/
+    text-align: center;
+    /*цвет фона*/
+    background-color: #F2E3E5;
+    background:
+        /*градиент на фоновой картинке*/
+        linear-gradient(to bottom, #2d2c2a30, #2d2c2a30),
+        /*задний фон - картинка*/
+        url(../assets/prospects-bg.jpg);
+    /*позиция фоновой картинки*/
+    background-position: 51% 71%;
+    /*размер фоновой картинки*/
+    background-size: cover;
+    /*повторение фоновой картинки*/
+    background-repeat: no-repeat;
+
+
+
+    /* эффект при скролле */
+    background-attachment: fixed;
+}
+
+.main-page__prospects-2_wave-top {
+    /*позиционирование*/
+    position: absolute;
+    top: 0;
+    /*перемещение*/
+    transform: translateY(-5%);
+}
+
+.main-page__prospects-2_wave-top_img {
+    /*ширина*/
+    width: 100%;
+}
+
+.main-page__prospects-2_wave-bottom {
+    /*позиционирование*/
+    position: absolute;
+    bottom: 0;
+}
+
+.main-page__prospects-2_wave-bottom_img {
+    /*ширина*/
+    width: 100%;
+    /*поворот изображения*/
+    rotate: 180deg;
+    /*перемещение*/
+    transform: translateY(-10%);
+}
+
+.main-page__prospects-2_h4 {
+    /*позиционирование*/
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*размер текста*/
+    font-size: 35px;
+}
+
+.main-page__prospects-2_h3 {
+    /*позиционирование*/
+    position: absolute;
+    top: 25%;
+    /*размер текста*/
+    font-size: 45px;
+    /*ширина*/
+    width: 45%;
+    color: #fbf8f7;
+}
+
+
+/* К Л У Б */
+
+.main-page__club {
+    /*позиционирование*/
+    position: relative;
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 32%;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*высота*/
+    height: 500px;
+    /*цвет фона*/
+    background-color: #fbf8f7;
+}
+
+
+.main-page__club_photos-block {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-items: center;
+    /*высота*/
+    height: 100%;
+}
+
+.main-page__club_photo {
+    /*ширина*/
+    width: 370px;
+}
+
+.main-page__club_block-figure-p {
+    /*внешние отступы*/
+    margin: 0 100px 0 0;
+}
+
+.main-page__club_figure-p {
+    /*позиционирование*/
+    position: absolute;
+    /*перемещение*/
+    transform: translate(3%, 3%);
+
+    /*анимация*/
+    animation: 20s linear 0s normal none infinite running club-rotate-p;
+    -webkit-animation: 20s linear 0s normal none infinite running club-rotate-p;
+}
+
+@keyframes club-rotate-p {
+    0% {
+        transform: translate(-3%, 2%) rotate(-90deg);
+    }
+
+    100% {
+        transform: translate(-3%, 2%) rotate(-450deg);
+    }
+}
+
+@-webkit-keyframes club-rotate-p {
+    0% {
+        transform: translate(-3%, 2%) rotate(-90deg);
+    }
+
+    100% {
+        transform: translate(-3%, 2%) rotate(-450deg);
+    }
+}
+
+.main-page__club_block-figure-r {
+    /*внешние отступы*/
+    margin: 0 0 0 100px;
+}
+
+.main-page__club_figure-r {
+    /*позиционирование*/
+    position: absolute;
+    /*перемещение*/
+    transform: translate(3%, -3%);
+
+    /*анимация*/
+    animation: 20s linear 0s normal none infinite running club-rotate-r;
+    -webkit-animation: 20s linear 0s normal none infinite running club-rotate-r;
+}
+
+@keyframes club-rotate-r {
+    0% {
+        transform: translate(-3%, -8%) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(-3%, -8%) rotate(540deg);
+    }
+}
+
+@-webkit-keyframes club-rotate-r {
+    0% {
+        transform: translate(-3%, -8%) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(-3%, -8%) rotate(540deg);
+    }
+}
+
+
+.main-page__club_girls-photo {
+    /*позиционирование*/
+    position: absolute;
+    z-index: 1;
+}
+
+.main-page__club_text-block {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 20px;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*внешние отступы*/
+    margin-bottom: 5%;
+}
+
+.main-page__club_text-block_club-caption {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*ширина*/
+    width: 150px;
+    /*высота*/
+    height: 30px;
+    /*скругление углов*/
+    border-radius: 8px;
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*размер текста*/
+    font-size: 14px;
+    /*толщина шрифта*/
+    font-weight: bold;
+    /*цвет фона*/
+    background-color: #f2e3e5;
+}
+
+.main-page__club_text-block_h4 {
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*размер текста*/
+    font-size: 35px;
+    /*толщина шрифта*/
+    font-weight: bold;
+}
+
+.main-page__club_text-block_marked-list {
+    /*маркеры внутри текстового блока*/
+    list-style-position: inside;
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*размер текста*/
+    font-size: 24px;
+    /*межстрочный интервал*/
+    line-height: 1.6;
+}
+
+.main-page__club_text-block_button {
+    /*размер текста*/
+    font-size: 20px;
+}
+
+
+
+/* ПРЕПОДАВАТЕЛИ */
+
+.main-page__teachers {
+    /*блочная модель*/
+    padding: 2.5% 2% 1% 2%;
+    /*оформление*/
+    background-color: #f2e3e5;
+}
+
+.main-page__teachers_name {
+    /*типографика*/
+    text-align: center;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.main-page__teachers_cards {
+    /*позиционирование*/
+    position: relative;
+    /*блочная модель*/
+    padding: 2% 5%;
+}
+
+.main-page__teachers_cards .slick-arrow {
+    /*позиционирование*/
+    position: absolute;
+    top: 50%;
+
+    /*блочная модель*/
+    margin-top: -27px;
+    /*половина от высоты*/
+    width: 55px;
+    height: 55px;
+
+    /*типографика*/
+    font-size: 0;
+    /*оформление*/
+    border: none;
+    background-color: #862d38;
+    border-radius: 50%;
+    box-shadow: 3px 3px #2d2c2a;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    cursor: pointer;
+    /*анимации*/
+    transition: all 0.8s;
+
+    /*анимация нажатия кнопки*/
+    -webkit-transition:
+        box-shadow 0.4s,
+        -webkit-transform 0.4s,
+        background-color 0.8s;
+    transition:
+        box-shadow 0.4s,
+        transform 0.4s,
+        background-color 0.8s;
+}
+
+.main-page__teachers_cards .slick-arrow:hover {
+    /*оформление*/
+    background-color: #74262f;
+}
+
+.main-page__teachers_cards .slick-arrow:active {
+    /*цвет фона*/
+    background-color: #74262F;
+    /*тень*/
+    box-shadow: 0px 0px #2D2C2A;
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    transition: 0.1s;
+}
+
+.main-page__teachers_cards .slick-arrow.slick-prev {
+    /*позиционирование*/
+    left: 0;
+    /*оформление*/
+    background-image: url(../assets/teach-arrow-l.png);
+}
+
+.main-page__teachers_cards .slick-arrow.slick-next {
+    /*позиционирование*/
+    right: 0;
+    /*оформление*/
+    background-image: url(../assets/teach-arrow-r.png);
+}
+
+.main-page__teachers_card-item {
+    /*блочная модель*/
+    display: flex;
+    justify-content: center;
+    height: 565px;
+}
+
+.main-page__teachers_card {
+    /*блочная модель*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 560px;
+
+    /*типографика*/
+    text-align: left;
+    /*оформление*/
+    background-color: #fbf8f7;
+    box-shadow: 4px 4px #2d2c2a;
+}
+
+.main-page__teachers_photos {
+    /*блочная модель*/
+    height: 360px;
+    width: 100%;
+
+    /*оформление*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-page__teachers_photos-1 {
+    /*оформление*/
+    background-image: url('../assets/teacher-1.jpg');
+    background-position: 50% 35%;
+}
+
+.main-page__teachers_photos-2 {
+    /*оформление*/
+    background-image: url('../assets/teacher-2.jpg');
+    background-position: 50% 12%;
+}
+
+.main-page__teachers_photos-3 {
+    /*оформление*/
+    background-image: url('../assets/teacher-3.jpg');
+    background-position: 50% 5%;
+}
+
+.main-page__teachers_photos-4 {
+    /*оформление*/
+    background-image: url('../assets/teacher-4.jpg');
+    background-position: 50% 22%;
+}
+
+.main-page__teachers_photos-5 {
+    /*оформление*/
+    background-image: url('../assets/teacher-5.jpg');
+    background-position: 50% 25%;
+}
+
+.main-page__teachers_photos-6 {
+    /*оформление*/
+    background-image: url('../assets/teacher-6.jpg');
+    background-position: 50% 10%;
+}
+
+.main-page__teachers_texts {
+    /*блочная модель*/
+    padding: 5% 5.5%;
+}
+
+.main-page__teachers_names {
+    /*блочная модель*/
+    margin-bottom: 4%;
+    /*типографика*/
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.main-page__teachers_text {
+    /*блочная модель*/
+    margin-top: 8px;
+    /*типографика*/
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.main-page__teachers_buttons {
+    /*блочная модель*/
+    padding: 3% 8%;
+    margin-bottom: 5%;
+
+    /*типографика*/
+    font-size: 14px;
+    color: #fbf8f7;
+    font-weight: 600;
+
+    /*оформление*/
+    background-color: #862d38;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px #2d2c2a;
+    cursor: pointer;
+    /*анимации*/
+    transition: all 0.8s;
+
+    /*анимация нажатия кнопки*/
+    -webkit-transition:
+        box-shadow 0.4s,
+        -webkit-transform 0.4s,
+        background-color 0.8s;
+    transition:
+        box-shadow 0.4s,
+        transform 0.4s,
+        background-color 0.8s;
+}
+
+.main-page__teachers_buttons:hover {
+    /*оформление*/
+    background-color: #74262f;
+}
+
+.main-page__teachers_buttons:active {
+    /*цвет фона*/
+    background-color: #74262F;
+    /*тень*/
+    box-shadow: 0px 0px #2D2C2A;
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    transition: 0.1s;
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+    /*оформление*/
+    overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+    /*блочная модель*/
+    display: flex;
+
+}
+
+/* П Р Е И М У Щ Е С Т В А */
+
+.main-page__advantages {
+    /*позиционирование*/
+    position: relative;
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 5%;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-items: center;
+    /*высота*/
+    height: 700px;
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*выраванивание текста по центру*/
+    text-align: center;
+    /*цвет фона*/
+    background-color: #d2e3ea;
+    background:
+        /*градиент на фоновой картинке*/
+        linear-gradient(to bottom, #2d2c2a30, #2d2c2a30),
+        /*задний фон - картинка*/
+        url(../assets/advantages-bg.jpg);
+    /*позиция фоновой картинки*/
+    background-position: 51% 8%;
+    /*размер фоновой картинки*/
+    background-size: cover;
+    /*повторение фоновой картинки*/
+    background-repeat: no-repeat;
+
+
+
+    /* эффект при скролле */
+    background-attachment: fixed;
+}
+
+.main-page__advantages_title-h3 {
+    /*ширина*/
+    width: 890px;
+    /*цвет текста*/
+    color: #FBF8F7;
+    /*размер текста*/
+    font-size: 45px;
+    /*толщина шрифта*/
+    font-weight: bold;
+    /*выравнивание текста*/
+    text-align: center;
+    /*межстрочный интервал*/
+    line-height: 1.3;
+}
+
+.main-page__advantages_figures-block {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 30px;
+    /*перенос элементов*/
+    flex-wrap: wrap;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*расположение элементов*/
+    align-content: center;
+    /*ширина*/
+    width: 75%;
+}
+
+.main-page__advantages_figures-block_block-1 {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-items: center;
+}
+
+.main-page__advantages_figure {
+    /*ширина*/
+    width: 200px;
+}
+
+.main-page__advantages_figure-p {
+    /*позиционирование*/
+    position: absolute;
+    /*перемещение*/
+    transform: translate(-60%, 3%);
+
+    /*анимация*/
+    animation: 20s linear 0s normal none infinite running advantages-rotate-p;
+    -webkit-animation: 20s linear 0s normal none infinite running advantages-rotate-p;
+}
+
+@keyframes advantages-rotate-p {
+    0% {
+        transform: translate(-60%, 3%) rotate(-90deg);
+    }
+
+    100% {
+        transform: translate(-60%, 3%) rotate(-450deg);
+    }
+}
+
+@-webkit-keyframes advantages-rotate-p {
+    0% {
+        transform: translate(-60%, 3%) rotate(-90deg);
+    }
+
+    100% {
+        transform: translate(-60%, 3%) rotate(-450deg);
+    }
+}
+
+.main-page__advantages_figures-block_block-2 {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-items: center;
+    margin-right: 5%;
+}
+
+.main-page__advantages_figure-b {
+    /*позиционирование*/
+    position: absolute;
+    /*перемещение*/
+    transform: translate(-40%, -3%);
+
+    /*анимация*/
+    animation: 20s linear 0s normal none infinite running advantages-rotate-b;
+    -webkit-animation: 20s linear 0s normal none infinite running advantages-rotate-b;
+}
+
+@keyframes advantages-rotate-b {
+    0% {
+        transform: translate(-40%, -3%) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(-40%, -3%) rotate(540deg);
+    }
+}
+
+@-webkit-keyframes advantages-rotate-b {
+    0% {
+        transform: translate(-40%, -3%) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(-40%, -3%) rotate(540deg);
+    }
+}
+
+.main-page__advantages_figure-w {
+    /*позиционирование*/
+    position: relative;
+    z-index: 1;
+}
+
+.main-page__advantages_figures-block_figure-w {
+    /*позиционирование*/
+    position: relative;
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-items: center;
+    /*высота*/
+    height: 222px;
+    /*ширина*/
+    width: 222px;
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*выраванивание текста по центру*/
+    text-align: center;
+    /*задний фон - картинка*/
+    background-image: url(../assets/figure-w.png);
+    /*размер фоновой картинки*/
+    background-size: 200px;
+    /*повторение фоновой картинки*/
+    background-repeat: no-repeat;
+    /*позиция фоновой картинки*/
+    background-position: center;
+
+}
+
+.main-page__advantages_figures-block_figure-w_text {
+    /*позиционирование*/
+    position: absolute;
+    /*ширина*/
+    width: 157px;
+    /*размер текста*/
+    font-size: 16px;
+}
+
+
+/* С Е Р Т И Ф И К А Т */
+
+.main-page__certificate {
+    position: relative;
+    z-index: 1;
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 5%;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*высота*/
+    height: 530px;
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*цвет фона*/
+    background-color: #F2E3E5
+}
+
+.main-page__certificate_text-block {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 10%;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-items: start;
+    /*высота*/
+    height: 100%;
+}
+
+.main-page__certificate_text-block_h4 {
+    /*ширина*/
+    width: 520px;
+    /*размер текста*/
+    font-size: 35px;
+    /*толщина текста*/
+    font-weight: bold;
+}
+
+.main-page__certificate_text-block_description {
+    /*ширина*/
+    width: 300px;
+    /*размер текста*/
+    font-size: 24px;
+}
+
+.main-page__certificate_figures-block {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-content: center;
+    /*ширина*/
+    width: 333px;
+    /*высота*/
+    height: 333px;
+    /*внешний отступ*/
+    margin-bottom: 2%;
+}
+
+.main-page__certificate_button-bottom {
+    display: none;
+}
+
+.main-page__certificate_certificate-photo {
+    /*позиционирование*/
+    position: absolute;
+    z-index: 10;
+    /*ширина*/
+    width: auto;
+}
+
+.main-page__certificate_figure-r {
+    /*позиционирование*/
+    position: absolute;
+    /*перемещение*/
+    transform: translate(10%, -20%);
+
+    /*анимация*/
+    animation: 20s linear 0s normal none infinite running certificate-rotate-r;
+    -webkit-animation: 20s linear 0s normal none infinite running certificate-rotate-r;
+}
+
+@keyframes certificate-rotate-r {
+    0% {
+        transform: translate(10%, -20%) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(10%, -20%) rotate(540deg);
+    }
+}
+
+@-webkit-keyframes certificate-rotate-r {
+    0% {
+        transform: translate(10%, -20%) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(10%, -20%) rotate(540deg);
+    }
+}
+
+.main-page__certificate_figure-w {
+    /*позиционирование*/
+    position: absolute;
+    /*перемещение*/
+    transform: translate(-20%, 30%);
+
+    /*анимация*/
+    animation: 20s linear 0s normal none infinite running certificate-rotate-w;
+    -webkit-animation: 20s linear 0s normal none infinite running certificate-rotate-w;
+}
+
+@keyframes certificate-rotate-w {
+    0% {
+        transform: translate(-20%, 30%) rotate(-90deg);
+    }
+
+    100% {
+        transform: translate(-20%, 30%) rotate(-450deg);
+    }
+}
+
+@-webkit-keyframes certificate-rotate-w {
+    0% {
+        transform: translate(-20%, 30%) rotate(-90deg);
+    }
+
+    100% {
+        transform: translate(-20%, 30%) rotate(-450deg);
+    }
+}
+
+.main-page__certificate_figure {
+    /*ширина*/
+    width: 300px;
+}
+
+
+
+
+/* КУРСЫ */
+.main-page__courses {
+    /*блочная модель*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 3% 0 5% 0;
+    /*оформление*/
+    background-color: #fbf8f7;
+}
+
+.main-page__courses_name {
+    /*типографика*/
+    text-align: center;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.main-page__courses_filters {
+    /*блочная модель*/
+    padding-top: 25px;
+    width: 1040px;
+}
+
+.main-page__courses_filters-name {
+    /*типографика*/
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 31px;
+}
+
+.main-page__courses_filters-buttons {
+    /*блочная модель*/
+    display: flex;
+    gap: 25px;
+    padding: 5px 0 15px 0;
+}
+
+.main-page__courses_filters-button {
+    /*блочная модель*/
+    width: 230px;
+    height: 45px;
+
+    /*типографика*/
+    font-size: 16px;
+    color: #862d38;
+    font-weight: 600;
+
+    /*оформление*/
+    background-color: #f2e3e5;
+    border: none;
+    box-shadow: 3px 3px #2d2c2a;
+    border-radius: 8px;
+    cursor: pointer;
+    /*анимации*/
+    transition: all 0.8s;
+
+    /*анимация нажатия кнопки*/
+    -webkit-transition:
+        box-shadow 0.4s,
+        -webkit-transform 0.4s,
+        background-color 0.8s;
+    transition:
+        box-shadow 0.4s,
+        transform 0.4s,
+        background-color 0.8s;
+}
+
+.main-page__courses_filters-button:hover {
+    /*типографика*/
+    color: #fbf8f7;
+    /*оформление*/
+    background-color: #862d38;
+}
+
+.main-page__courses_filters-button:active {
+    /*цвет фона*/
+    background-color: #74262F;
+    /*тень*/
+    box-shadow: 0px 0px #2D2C2A;
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    transition: 0.1s;
+}
+
+.main-page__courses_filters-button-on {
+    /*типографика*/
+    color: #fbf8f7;
+    /*оформление*/
+    background-color: #862d38;
+}
+
+.main-page__courses_filters-radios {
+    /*блочная модель*/
+    display: flex;
+    height: 51px;
+}
+
+.main-page__courses_filters-radio {
+    /*блочная модель*/
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    width: 155px;
+
+    /*типографика*/
+    font-size: 20px;
+    line-height: 1.55;
+}
+
+.main-page__courses_filters-radio-1 {
+    /*блочная модель*/
+    width: 175px;
+}
+
+.main-page__courses_filters-btn {
+    /*блочная модель*/
+    width: 25px;
+    height: 25px;
+
+    /*оформление*/
+    background-color: #f2e3e5;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 2px 2px #2d2c2a;
+    cursor: pointer;
+    /*анимации*/
+    transition: all 0.8s;
+
+    /*анимация нажатия кнопки*/
+    -webkit-transition:
+        box-shadow 0.4s,
+        -webkit-transform 0.4s,
+        background-color 0.8s;
+    transition:
+        box-shadow 0.4s,
+        transform 0.4s,
+        background-color 0.8s;
+}
+
+.main-page__courses_filters-btn:hover {
+    /*оформление*/
+    background-color: #862d38;
+}
+
+.main-page__courses_filters-btn:active {
+    /*цвет фона*/
+    background-color: #74262F;
+    /*тень*/
+    box-shadow: 0px 0px #2D2C2A;
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+    transition: 0.1s;
+}
+
+.main-page__courses_filters-btn-on {
+    /*оформление*/
+    background-color: #862d38;
+}
+
+.main-page__courses_filters-alert {
+    /*блочная модель*/
+    padding: 2px 4px;
+    /*типографика*/
+    color: #2d2c2a;
+    font-size: 10px;
+
+    /*оформление*/
+    background-color: #f2e3e5;
+    border-radius: 5px;
+    box-shadow: 2px 2px #2d2c2a;
+
+}
+
+.main-page__courses_cards {
+    /*блочная модель*/
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 35px;
+    column-gap: 70px;
+    width: 1040px;
+    padding-top: 10px;
+}
+
+.main-page__courses_card {
+    /*блочная модель*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 274px;
+    height: 274px;
+    padding: 13px;
+
+    /*оформление*/
+    background-color: #d2e3ea;
+    box-shadow: 5px 5px #2d2c2a;
+}
+
+.main-page__courses_card-none {
+    /*блочная модель*/
+    display: none;
+}
+
+.main-page__courses_card-dot {
+    /*блочная модель*/
+    width: 33px;
+    height: 36px;
+
+    /*оформление*/
+    background-color: #f2e3e5;
+    box-shadow: 3px 3px #2d2c2a;
+    border-radius: 50%;
+}
+
+.main-page__courses_card-name {
+    /*блочная модель*/
+    margin-top: 8px;
+    width: 100%;
+
+    /*типографика*/
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+.main-page__courses_card-about {
+    /*блочная модель*/
+    margin-top: 13px;
+    width: 100%;
+
+    /*типографика*/
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.main-page__courses_card-about-link {
+    /*блочная модель*/
+    padding-left: 6px;
+
+    /*типографика*/
+    color: #862d38;
+    font-weight: 600;
+    text-decoration: underline;
+    /*оформление*/
+    cursor: pointer;
+}
+
+.main-page__courses_card-about-link:hover {
+    /*типографика*/
+    color: #74262f;
+}
+
+.main-page__courses_card-about-link-2 {
+    /*блочная модель*/
+    padding-left: 1px;
+}
+
+.main-page__courses_card-price {
+    /*блочная модель*/
+    width: 100%;
+    margin-top: 33px;
+
+    /*типографика*/
+    text-align: start;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.main-page__courses_card-buttons {
+    /*блочная модель*/
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.main-page__courses_card-btn-1 {
+    /*блочная модель*/
+    width: 150px;
+    height: 40px;
+
+    /*типографика*/
+    font-size: 17px;
+    font-weight: 700;
+    color: #2d2c2a;
+
+    /*оформление*/
+    background-color: #fbf8f7;
+    box-shadow: 3px 3px #2d2c2a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    /*анимации*/
+    transition: all 0.8s;
+
+    /*анимация нажатия кнопки*/
+    -webkit-transition:
+        box-shadow 0.4s,
+        -webkit-transform 0.4s,
+        background-color 0.8s;
+    transition:
+        box-shadow 0.4s,
+        transform 0.4s,
+        background-color 0.8s;
+}
+
+.main-page__courses_card-btn-1:hover {
+    /*типографика*/
+    color: #862d38;
+    /*оформление*/
+    background-color: #f2e3e5;
+}
+
+.main-page__courses_card-btn-1:active {
+    /*тень*/
+    box-shadow: 0px 0px #2D2C2A;
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    transition: 0.1s;
+}
+
+.main-page__courses_card-btn-2 {
+    /*блочная модель*/
+    width: 110px;
+    height: 35px;
+
+    /*типографика*/
+    font-size: 13px;
+    font-weight: 700;
+    color: #862d38;
+
+    /*оформление*/
+    background-color: #f2e3e5;
+    box-shadow: 3px 3px #2d2c2a;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    /*анимации*/
+    transition: all 0.8s;
+
+    /*анимация нажатия кнопки*/
+    -webkit-transition:
+        box-shadow 0.4s,
+        -webkit-transform 0.4s,
+        background-color 0.8s;
+    transition:
+        box-shadow 0.4s,
+        transform 0.4s,
+        background-color 0.8s;
+}
+
+.main-page__courses_card-btn-2:hover {
+    /*типографика*/
+    color: #2d2c2a;
+    /*оформление*/
+    background-color: #fbf8f7;
+}
+
+.main-page__courses_card-btn-2:active {
+    /*тень*/
+    box-shadow: 0px 0px #2D2C2A;
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    transition: 0.1s;
+}
+
+.main-page__courses_button {
+    /*блочная модель*/
+    width: 100%;
+    /*типографика*/
+    text-align: center;
+}
+
+.main-page__courses_btn {
+    /*блочная модель*/
+    width: 250px;
+    height: 55px;
+    margin-top: 40px;
+
+    /*типографика*/
+    font-size: 20px;
+    color: #862d38;
+    font-weight: 700;
+    line-height: 1.55;
+
+    /*оформление*/
+    background-color: #f2e3e5;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px #2d2c2a;
+    cursor: pointer;
+    /*анимации*/
+    transition: all 0.8s;
+
+    /*анимация нажатия кнопки*/
+    -webkit-transition:
+        box-shadow 0.4s,
+        -webkit-transform 0.4s,
+        background-color 0.8s;
+    transition:
+        box-shadow 0.4s,
+        transform 0.4s,
+        background-color 0.8s;
+}
+
+.main-page__courses_btn:hover {
+    /*типографика*/
+    color: #fbf8f7;
+    /*оформление*/
+    background-color: #862d38;
+}
+
+.main-page__courses_btn:active {
+    /*цвет фона*/
+    background-color: #74262F;
+    /*тень*/
+    box-shadow: 0px 0px #2D2C2A;
+    -webkit-transform: translate(5px, 5px);
+    transform: translate(5px, 5px);
+    transition: 0.1s;
+}
+
+
+
+
+/* ОТЗЫВЫ */
+.main-page__feedback {
+    /*блочная модель*/
+    padding: 3% 6%;
+    /*оформление*/
+    background-image: linear-gradient(rgba(45, 44, 42, 0.2), rgba(45, 44, 42, 0.1)),
+        url(../assets/feedback-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+}
+
+.main-page__feedback_name {
+    /*типографика*/
+    text-align: center;
+    font-size: 42px;
+    font-weight: 600;
+    color: #fbf8f7;
+}
+
+.main-page__feedback_cards {
+    /*позиционирование*/
+    position: relative;
+    /*блочная модель*/
+    padding: 4% 6% 2% 6%;
+}
+
+.main-page__feedback_cards .slick-arrow {
+    /*позиционирование*/
+    position: absolute;
+    top: 50%;
+
+    /*блочная модель*/
+    margin-top: -27px;
+    /*половина от высоты*/
+    width: 55px;
+    height: 55px;
+
+    /*типографика*/
+    font-size: 0;
+    /*оформление*/
+    border: none;
+    background-color: #f2e3e5;
+    border-radius: 50%;
+    box-shadow: 3px 3px #2d2c2a;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    cursor: pointer;
+    /*анимации*/
+    transition: all 0.8s;
+
+    /*анимация нажатия кнопки*/
+    -webkit-transition:
+        box-shadow 0.4s,
+        -webkit-transform 0.4s,
+        background-color 0.8s;
+    transition:
+        box-shadow 0.4s,
+        transform 0.4s,
+        background-color 0.8s;
+}
+
+.main-page__feedback_cards .slick-arrow:hover {
+    /*оформление*/
+    background-color: #fbf8f7;
+}
+
+.main-page__feedback_cards .slick-arrow:active {
+    /*оформление*/
+    background-color: #fbf8f7;
+    /*тень*/
+    box-shadow: 0px 0px #2D2C2A;
+    -webkit-transform: translate(5px, 5px);
+    transform: translate(5px, 5px);
+    transition: 0.1s;
+}
+
+.main-page__feedback_cards .slick-arrow.slick-prev {
+    /*позиционирование*/
+    left: 0;
+    /*оформление*/
+    background-image: url(../assets/feed-arrow-l.png);
+}
+
+.main-page__feedback_cards .slick-arrow.slick-next {
+    /*позиционирование*/
+    right: 0;
+    /*оформление*/
+    background-image: url(../assets/feed-arrow-r.png);
+}
+
+.main-page__feedback_items {
+    /*блочная модель*/
+    display: flex;
+    justify-content: center;
+    height: 295px;
+}
+
+.main-page__feedback_review {
+    /*блочная модель*/
+    padding: 32px 15px;
+    width: 270px;
+    height: 226px;
+
+    /*оформление*/
+    background-color: #fbf8f7;
+    box-shadow: 5px 5px 0px #2d2c2a;
+}
+
+.main-page__feedback_pn {
+    /*блочная модель*/
+    display: flex;
+    gap: 15px;
+    padding-left: 10px;
+}
+
+.main-page__feedback_photos {
+    /*блочная модель*/
+    width: 50px;
+    height: 50px;
+
+    /*оформление*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+}
+
+.main-page__feedback_photos-1 {
+    /*оформление*/
+    background-image: url(../assets/feedback-1.png);
+}
+
+.main-page__feedback_photos-2 {
+    /*оформление*/
+    background-image: url(../assets/feedback-2.png);
+}
+
+.main-page__feedback_photos-3 {
+    /*оформление*/
+    background-image: url(../assets/feedback-3.png);
+}
+
+.main-page__feedback_photos-4 {
+    /*оформление*/
+    background-image: url(../assets/feedback-4.svg);
+}
+
+.main-page__feedback_photos-5 {
+    /*оформление*/
+    background-image: url(../assets/feedback-5.jpg);
+}
+
+.main-page__feedback_photos-6 {
+    /*оформление*/
+    background-image: url(../assets/feedback-6.jpg);
+}
+
+.main-page__feedback_names {
+    /*блочная модель*/
+    padding-top: 5px;
+    /*типографика*/
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.55;
+}
+
+.main-page__feedback_comments-1 {
+    /*блочная модель*/
+    margin-top: 20px;
+    /*типографика*/
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.main-page__feedback_comments-2 {
+    /*блочная модель*/
+    margin-top: 12px;
+    /*типографика*/
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+
+
+/* FAQ */
+.main-page__FAQ {
+    /*блочная модель*/
+    padding: 3% 2% 1% 2%;
+    /*оформление*/
+    background-color: #fbf8f7;
+}
+
+.main-page__FAQ_name {
+    /*типографика*/
+    text-align: center;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.main-page__FAQ_cards {
+    position: relative;
+    /*блочная модель*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 2% 0;
+    z-index: 1;
+}
+
+.main-page__FAQ_card {
+    /*блочная модель*/
+    padding: 15px;
+    width: 60%;
+
+    /*оформление*/
+    background-color: #d2e3ea;
+    box-shadow: 5px 5px #2d2c2a;
+}
+
+.main-page__FAQ_qb {
+    /*блочная модель*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-page__FAQ_question {
+    /*типографика*/
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.main-page__FAQ_button {
+    /*блочная модель*/
+    width: 40px;
+    height: 40px;
+
+    /*оформление*/
+    border: none;
+    background-color: #f2e3e5;
+    border-radius: 50%;
+    box-shadow: 3px 3px #2d2c2a;
+    cursor: pointer;
+    /*анимации*/
+    transition: all 0.8s;
+
+    /*анимация нажатия кнопки*/
+    -webkit-transition:
+        box-shadow 0.4s,
+        -webkit-transform 0.4s,
+        background-color 0.8s;
+    transition:
+        box-shadow 0.4s,
+        transform 0.4s,
+        background-color 0.8s;
+}
+
+.main-page__FAQ_button:hover {
+    background-color: #fbf8f7;
+}
+
+.main-page__FAQ_button:active {
+    background-color: #fbf8f7;
+    /*тень*/
+    box-shadow: 0px 0px #2D2C2A;
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    transition: 0.1s;
+}
+
+.main-page__FAQ_button-img {
+    /*блочная модель*/
+    width: 75%;
+    /*оформление*/
+    cursor: pointer;
+    /*анимации*/
+    transition: all 0.8s;
+}
+
+.main-page__FAQ_button-img-open {
+    /*анимации*/
+    transform: rotate(90deg);
+}
+
+.main-page__FAQ_answer {
+    /*типографика*/
+    font-size: 16px;
+    line-height: 1.55;
+    /*анимации*/
+    transition: all 0.8s;
+}
+
+.main-page__FAQ_answer-link {
+    /*типографика*/
+    color: #862d38;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.main-page__FAQ_answer-open {
+    /*блочная модель*/
+    margin-top: 10px;
+}
+
+
+
+/* К О Н Т А К Т Ы */
+
+.main-page__contacts {
+    /*позиционирование*/
+    position: relative;
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-items: center;
+    /*высота*/
+    height: 760px;
+    /*цвет текста*/
+    color: #fbf8f7;
+    /*выраванивание текста по центру*/
+    text-align: center;
+    /*цвет фона*/
+    background-color: #F2E3E5;
+    background:
+        /*градиент на фоновой картинке*/
+        linear-gradient(to bottom, #2d2c2a70, #2d2c2a70),
+        /*задний фон - картинка*/
+        url(../assets/contacts-bg.png);
+    /*позиция фоновой картинки*/
+    background-position: 51% 71%;
+    /*размер фоновой картинки*/
+    background-size: cover;
+    /*повторение фоновой картинки*/
+    background-repeat: no-repeat;
+
+
+
+    /* эффект при скролле */
+    background-attachment: fixed;
+}
+
+.main-page__contacts_wave-top {
+    /*позиционирование*/
+    position: absolute;
+    top: 0;
+    /*перемещение*/
+    transform: translateY(-5%);
+}
+
+.main-page__contacts_wave-top_img {
+    /*ширина*/
+    width: 100%;
+    /*перемещение*/
+    transform: translateY(-0%);
+}
+
+.main-page__contacts_text-block {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 5%;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*ширина*/
+    width: 500px;
+    /*высота*/
+    height: 280px;
+    /*выравнивание текста*/
+    text-align: left;
+    /*внутренние отступы*/
+    padding-bottom: 80px;
+}
+
+.main-page__contacts_text-block_caption {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*ширина*/
+    width: 340px;
+    /*высота*/
+    height: 60px;
+    /*скругление углов*/
+    border-radius: 10px;
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*размер текста*/
+    font-size: 24px;
+    /*толщина шрифта*/
+    font-weight: bold;
+    /*цвет фона*/
+    background-color: #f2e3e5;
+}
+
+.main-page__contacts_text-block_h3 {
+    /*размер текста*/
+    font-size: 45px;
+    /*толщина шрифта*/
+    font-weight: bold;
+    color: #fbf8f7;
+}
+
+.main-page__contacts_text-block_email-caption {
+    /*размер текста*/
+    font-size: 30px;
+    color: #fbf8f7;
+}
+
+.main-page__contacts_socials-icons {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояниме между элементами*/
+    gap: 10px;
+}
+
+.main-page__contacts_socials-icon {
+    /*ширина*/
+    width: 50px;
+    /*курсор*/
+    cursor: pointer;
+}
+
+.main-page__contacts_form-block {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояниме между элементами*/
+    gap: 2%;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по вертикали*/
+    justify-content: center;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-items: center;
+    /*ширина*/
+    width: 370px;
+    /*высота*/
+    height: 480px;
+    /*цвет фона*/
+    background-color: #F2E3E5;
+    /*тень*/
+    box-shadow: 5px 5px #2D2C2A;
+}
+
+.main-page__contacts_form-block_title {
+    /*размер текста*/
+    font-size: 24px;
+    /*толщина шрифта*/
+    font-weight: bold;
+    /*цвет текста*/
+    color: #2D2C2A;
+}
+
+.main-page__contacts_form-block_forms {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояниме между элементами*/
+    gap: 12px;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по вертикали*/
+    justify-content: center;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-items: center;
+}
+
+.main-page__contacts_form {
+    /*ширина*/
+    width: 290px;
+    /*высота*/
+    height: 56px;
+    /*внутренние отступы*/
+    padding: 0 0 0 10px;
+    /*рамка*/
+    border: none;
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*цвет фона*/
+    background-color: #FBF8F7;
+    /*тень*/
+    box-shadow: 3px 3px #2D2C2A;
+    /*курсор*/
+    cursor: text;
+}
+
+input[type="text"] {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.main-page__contacts_form:focus {
+    /*рамка*/
+    border: none;
+    outline: none;
+}
+
+.main-page__contacts_form-question {
+    /*высота*/
+    height: auto;
+    /*внутренние отступы*/
+    padding: 15px 0 80px 10px;
+}
+
+.main-page__contacts_wave-bottom {
+    /*позиционирование*/
+    position: absolute;
+    bottom: 0;
+}
+
+::placeholder {
+    /*цвет текста*/
+    color: #8E8E8E;
+}
+
+
+.main-page__contacts_wave-bottom_img {
+    /*ширина*/
+    width: 100%;
+    /*поворот изображения*/
+    rotate: 180deg;
+    /*перемещение*/
+    transform: translateY(-50%);
+}
+
+
+/* П О Д В А Л */
+
+.footer {
+    /*позиционирование*/
+    z-index: 1;
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание по горизонтали*/
+    justify-content: space-around;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*высота*/
+    height: 200px;
+    /*шрифт*/
+    font-family: 'Arkhip';
+    /*цвет текста*/
+    color: #2d2c2ac7;
+    /*цвет фона*/
+    background-color: #FBF8F7;
+}
+
+.footer_text-block_rights-top {
+    /*размер текста*/
+    font-size: 14px;
+}
+
+.footer_text-block_rights-bottom {
+    display: none;
+}
+
+.footer_text-block_email {
+    /*позиционирование*/
+    position: relative;
+    top: 10px;
+    /*размер текста*/
+    font-size: 14px;
+}
+
+.footer_text-block_logotype {
+    /*позиционирование*/
+    position: relative;
+    top: 40px;
+    /*цвет текста*/
+    color: #6c1622c7;
+    /*размер текста*/
+    font-size: 20px;
+    /*начертание текста*/
+    font-weight: bold;
+}
+
+.footer_contacts-block_socials {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание по горизонтали*/
+    justify-content: end;
+    /*расстояние между элементами*/
+    gap: 10px;
+}
+
+.footer_contacts-block_socials_icon {
+    /*ширина*/
+    width: 30px;
+    /*курсор*/
+    cursor: pointer;
+}
+
+.footer_contacts-block_telephone {
+    /*позиционирование*/
+    position: relative;
+    top: 40px;
+    /*цвет текста*/
+    color: #6c1622c7;
+    /*размер текста*/
+    font-size: 17px;
+    /*начертание текста*/
+    font-weight: bold;
+    /*выравнивание текста*/
+    text-align: right;
+}
+
+
+
+
+
+
+/* pop-ups */
+
+
+
+.document-hidden {
+    overflow: hidden;
+}
+
+
+.pop-up {
+    /*позиционирование*/
+    position: fixed;
+    top: 0px;
+    z-index: 15;
+    overflow: hidden;
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*ширина*/
+    width: 100%;
+    /*высота*/
+    min-height: 100%;
+    /*цвет фона*/
+    background-color: #2d2c2a2c;
+    /*размытие*/
+    backdrop-filter: blur(5px);
+}
+
+
+.pop-up__cross-button {
+    /*позиционирование*/
+    position: absolute;
+    top: 2.5%;
+    right: 1.5%;
+    /*внешние отступы*/
+    margin: 0;
+    /*внутренние отступы*/
+    padding: 0;
+    /*рамка*/
+    border: 0;
+    outline: none;
+    /*цвет фона*/
+    background-color: transparent;
+}
+
+
+.pop-up__cross-icon {
+    /*ширина*/
+    width: 25px;
+    /*высота*/
+    height: 25px;
+    /*курсор*/
+    cursor: pointer;
+}
+
+
+.pop-up__content {
+    /*позиционирование*/
+    position: relative;
+    top: 5vh;
+    z-index: 20;
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание по горизонтали*/
+    justify-content: space-evenly;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*ширина*/
+    width: 750px;
+    /*высота*/
+    height: 370px;
+    /*шрифт*/
+    font-family: 'Arkhip';
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*цвет фона*/
+    background-color: #F2E3E5;
+    /*тень*/
+    box-shadow: 5px 5px #2D2C2A;
+}
+
+
+.pop-up__text-block {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*расстояние между элементами*/
+    gap: 35px;
+}
+
+.pop-up__course_text-block {
+    /*расстояние между элементами*/
+    gap: 20px;
+}
+
+.pop-up__title {
+    /*ширина*/
+    width: 360px;
+    /*размер текста*/
+    font-size: 24px;
+    /*начертание текста*/
+    font-weight: bold;
+    /*межстрочный интервал*/
+    line-height: 1.55;
+}
+
+.pop-up__caption {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 5px;
+    /*выравнивание по горизонтали*/
+    justify-content: start;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*внешние отступы*/
+    margin-top: 5px;
+    /*размер текста*/
+    font-size: 17px;
+    /*начертание текста*/
+    font-weight: normal;
+}
+
+.pop-up__caption_course-block {
+    /*выравнивание по горизонтали*/
+    justify-content: start;
+}
+
+.pop-up__caption_teacher {
+    /*начертание текста*/
+    font-weight: bold;
+    /*цвет текста*/
+    color: #862D38;
+}
+
+.pop-up__caption_course-name {
+    /*ширина*/
+    width: 300px;
+    /*цвет текста*/
+    color: #862D38;
+    /*начертание текста*/
+    font-weight: bold;
+    /*размер текста*/
+    font-size: 17px;
+}
+
+.pop-up__description {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание по горизонтали*/
+    justify-content: start;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*внутренние отступы*/
+    padding-left: 10px;
+    /*ширина*/
+    width: 340px;
+    /*высота*/
+    height: 100px;
+    /*размер текста*/
+    font-size: 14px;
+    /*маркеры внутри текстового блока*/
+    list-style-position: inside;
+    /*межстрочный интервал*/
+    line-height: 1.7;
+    /*цвет фона*/
+    background-color: #fbf8f7e9;
+    /*тень*/
+    box-shadow: 3px 3px #2D2C2A;
+}
+
+.pop-up_more-abt-course {
+    /*внешние отступы*/
+    margin-top: 2%;
+}
+
+.pop-up_more-abt-course_link {
+    /*цвет текста*/
+    color: #862D38;
+    /*начертание текста*/
+    font-weight: bold;
+    /*размер текста*/
+    font-size: 15px;
+    /*курсор*/
+    cursor: pointer;
+}
+
+.pop-up__contacts-top {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 5px;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*внешние отступы*/
+    margin-top: 10px;
+    /*размер текста*/
+    font-size: 16px;
+}
+
+.pop-up__course_contacts-top {
+    /*внешние отступы*/
+    margin-top: 0;
+}
+
+.pop-up__abt-price-caption {
+    /*внешние отступы*/
+    margin-top: 10px;
+    /*размер текста*/
+    font-size: 10px;
+}
+
+.pop-up__social-icon {
+    /*ширина*/
+    width: 35px;
+    /*курсор*/
+    cursor: pointer;
+}
+
+.pop-up__form-block {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояниме между элементами*/
+    gap: 12px;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по вертикали*/
+    justify-content: center;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-items: center;
+}
+
+
+.pop-up__form {
+    /*ширина*/
+    width: 290px;
+    /*высота*/
+    height: 56px;
+    /*внутренние отступы*/
+    padding: 0 0 0 10px;
+    /*рамка*/
+    border: none;
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*цвет фона*/
+    background-color: #FBF8F7;
+    /*тень*/
+    box-shadow: 3px 3px #2D2C2A;
+    /*курсор*/
+    cursor: text;
+}
+
+
+.pop-up__form-button {
+    /*внешние отступы сверху*/
+    margin-top: 30px;
+    /*ширина*/
+    width: 300px;
+    /*высота*/
+    height: 60px;
+    /*размер текста*/
+    font-size: 20px;
+    /*тень*/
+    box-shadow: 3px 3px #2D2C2A;
+}
+
+
+.pop-up__contacts-bottom {
+    display: none;
+}
+
+
+
+/*скрытие pop-up*/
+.pop-up__free-lesson {
+    display: none;
+}
+
+/*скрытие pop-up*/
+.pop-up__consultation {
+    display: none;
+}
+
+/*скрытие pop-up*/
+.pop-up__course {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/* СТРАНИЦА КЛУБА */
+
+
+/* П Р О М О - Б Л О К */
+
+.club-page__promo {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-items: center;
+    /*высота*/
+    height: 100vh;
+    /*цвет текста*/
+    color: #fbf8f7;
+    /*выраванивание текста по центру*/
+    text-align: left;
+    /*цвет фона*/
+    background-color: #d2e3ea;
+    background:
+        /*градиент на фоновой картинке*/
+        linear-gradient(to bottom, #2d2c2a60, #2d2c2a60),
+        /*задний фон - картинка*/
+        url(../assets/club-bg.png);
+    /*позиция фоновой картинки*/
+    background-position: 50% 58%;
+    /*размер фоновой картинки*/
+    background-size: cover;
+    /*повторение фоновой картинки*/
+    background-repeat: no-repeat;
+
+
+    /* эффект при скролле */
+    background-attachment: fixed;
+}
+
+.club-page__promo_content {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 50px;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*внешний отступ сверху*/
+    margin-top: 20vh;
+    /*ширина*/
+    width: 888px;
+}
+
+.club-page__promo_text-block {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 30px;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по вертикали*/
+    align-items: start;
+}
+
+.club-page__promo_caption {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*ширина*/
+    width: 380px;
+    /*высота*/
+    height: 50px;
+    /*скругление углов*/
+    border-radius: 10px;
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*размер текста*/
+    font-size: 24px;
+    /*толщина шрифта*/
+    font-weight: bold;
+    /*цвет фона*/
+    background-color: #f2e3e5;
+}
+
+.club-page__promo_h3 {
+    /*размер текста*/
+    font-size: 45px;
+    /*толщина шрифта*/
+    font-weight: bold;
+    color: #fbf8f7;
+}
+
+.club-page__promo_price-caption {
+    /*размер текста*/
+    font-size: 35px;
+    color: #fbf8f7;
+}
+
+.club-page__promo_buttons-block {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 5%;
+    /*выравнивание по горизонтали*/
+    justify-content: end;
+}
+
+.club-page__promo_button {
+    /*ширина*/
+    width: 260px;
+    /*высота*/
+    height: 55px;
+}
+
+
+.club-page__club-information {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*ширина*/
+    width: 100%;
+    /*высота*/
+    height: 750px;
+    /*цвет текста*/
+    color: #2D2C2A;
+    /*толщина шрифта*/
+    font-weight: normal;
+    /*цвет фона*/
+    background-color: #f2e3e5;
+}
+
+.club-page__club_text-block {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 40px;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*ширина*/
+    width: 700px;
+}
+
+.club-page__club_title {
+    /*ширина*/
+    width: 460px;
+    /*размер текста*/
+    font-size: 35px;
+    /*начертание текста*/
+    font-weight: bold;
+    /*межстрочный интервал*/
+    line-height: 1.2;
+}
+
+.club-page__club_description {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 20px;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*размер текста*/
+    font-size: 23px;
+}
+
+.club-page_small-figure {
+    /*ширина*/
+    width: 40px;
+}
+
+.club-page__club_figure-block {
+    /*позиционирование*/
+    position: relative;
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+}
+
+.club-page__small-figure-r_animation {
+    display: flex;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*анимация*/
+    animation: 20s linear 0s normal none infinite running club-rotate-small-r;
+    -webkit-animation: 20s linear 0s normal none infinite running club-rotate-small-r;
+}
+
+@keyframes club-rotate-small-r {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(540deg);
+    }
+}
+
+@-webkit-keyframes club-rotate-small-r {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(540deg);
+    }
+}
+
+.club-page__small-figure-w_animation {
+    display: flex;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*анимация*/
+    animation: 20s linear 0s normal none infinite running club-rotate-small-w;
+    -webkit-animation: 20s linear 0s normal none infinite running club-rotate-small-w;
+}
+
+@keyframes club-rotate-small-w {
+    0% {
+
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(-450deg);
+    }
+}
+
+@-webkit-keyframes club-rotate-small-w {
+    0% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(-450deg);
+    }
+}
+
+.club-page__club_figure-number {
+    /*позиционирование*/
+    position: absolute;
+}
+
+.club-page__white-number {
+    /*цвет текста*/
+    color: #FBF8F7;
+}
+
+.club-page__red-number {
+    /*цвет текста*/
+    color: #6C1621;
+}
+
+
+.club-page__club_figures-block {
+    /*позиционирование*/
+    position: relative;
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание по вертикали*/
+    align-items: stretch;
+    /*ширина*/
+    width: 450px;
+    /*высота*/
+    height: 370px;
+}
+
+.club-page__animation_big-figure-w {
+    /*позиционирование*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.club-page__big-figure-w {
+    /*ширина*/
+    width: 140px;
+}
+
+.club-page__animation_big-figure-r {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.club-page__big-figure-r {
+    width: 300px;
+}
+
+
+.club-page__animation_big-figure-r {
+    /*анимация*/
+    animation: 20s linear 0s normal none infinite running club-rotate-big-r;
+    -webkit-animation: 20s linear 0s normal none infinite running club-rotate-big-r;
+}
+
+@keyframes club-rotate-big-r {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(540deg);
+    }
+}
+
+@-webkit-keyframes club-rotate-big-r {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(540deg);
+    }
+}
+
+.club-page__animation_big-figure-w {
+    /*анимация*/
+    animation: 20s linear 0s normal none infinite running club-rotate-big-w;
+    -webkit-animation: 20s linear 0s normal none infinite running club-rotate-big-w;
+}
+
+@keyframes club-rotate-big-w {
+    0% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(-450deg);
+    }
+}
+
+@-webkit-keyframes club-rotate-big-w {
+    0% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(-450deg);
+    }
+}
+
+.club-page__contacts_wave-top_img {
+    transform: translateY(-4%);
+}
+
+
+.pop-up__club-request_description {
+    /*высота*/
+    height: 140px;
+}
+
+/* скрытие pop-up */
+.pop-up__club-request {
+    display: none;
+}
+
+
+
+/* ПОДРОБНЕЕ О КУРСЕ */
+.course-page__promo {
+    /*флекс-контейнер*/
+    display: flex;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали (горизонтали из-за column)*/
+    align-items: center;
+    /*высота*/
+    height: 100vh;
+    /*цвет текста*/
+    color: #fbf8f7;
+    /*выраванивание текста по центру*/
+    text-align: left;
+    /*цвет фона*/
+    background-color: #d2e3ea;
+    background:
+        /*градиент на фоновой картинке*/
+        linear-gradient(to bottom, #2d2c2a70, #2d2c2a70),
+        /*задний фон - картинка*/
+        url(../assets/cours-bg.png);
+    /*позиция фоновой картинки*/
+    background-position: 50% 58%;
+    /*размер фоновой картинки*/
+    background-size: cover;
+    /*повторение фоновой картинки*/
+    background-repeat: no-repeat;
+
+
+    /* эффект при скролле */
+    background-attachment: fixed;
+}
+
+
+
+.course-page__promo_teacher-caption {
+    /*размер текста*/
+    font-size: 25px;
+}
+
+
+
+/* информация о курсе */
+.course-page__course-information {
+    /*высота*/
+    height: 600px;
+}
+
+.course-page__course-information_caption {
+    /*внешние отступы*/
+    margin-top: 2%;
+    margin-bottom: 2%;
+    /*размер текста*/
+    font-size: 25px;
+}
+
+.course-page__course-content_description {
+    /*ширина*/
+    width: 250px;
+    /*размер текста*/
+    font-size: 24px;
+    /*межстрочный интервал*/
+    line-height: 1.55;
+}
+
+.course-page__course-content_h3 {
+    /*размер текста*/
+    font-size: 35px;
+}
+
+.course-page__course-content_card {
+    /*ширина*/
+    width: 300px;
+    /*высота*/
+    height: 300px;
+}
+
+
+.course-page_button {
+    display: none;
+}
+
+
+
+/* СТОИМОСТЬ ОБУЧЕНИЯ */
+.course-page__course-price_block {
+    /*позиционирование*/
+    position: relative;
+    z-index: 1;
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 10%;
+    /*выравнивание в столбец*/
+    flex-direction: column;
+    /*выравнивание по горизонтали*/
+    justify-content: center;
+    /*выравнивание по вертикали*/
+    align-items: center;
+    /*высота*/
+    height: 500px;
+    /*цвет фона*/
+    background-color: #FBF8F7
+}
+
+.course-page__course-price_cards {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 70px;
+}
+
+.course-page__courses_card {
+    /*флекс-контейнер*/
+    display: flex;
+    /*расстояние между элементами*/
+    gap: 5%;
+    align-items: center;
+    flex-direction: column;
+    /*ширина*/
+    width: 274px;
+    /*высота*/
+    height: 274px;
+    /*внутренние отступы*/
+    padding: 13px;
+    /*цвет фона*/
+    background-color: #d2e3ea;
+    /*тень*/
+    box-shadow: 5px 5px #2d2c2a;
+}
+
+.course-page__course-price_title {
+    /*размер текста*/
+    font-size: 35px;
+    /*начертание текста*/
+    font-weight: bold;
+}
+
+.course-page__course-price_month {
+    /*размер текста*/
+    font-size: 30px;
+    /*начертание текста*/
+    font-weight: bold;
+}
+
+.course-page__course-price_price {
+    /*размер текста*/
+    font-size: 35px;
+    /*начертание текста*/
+    font-weight: bold;
+}
+
+
+.course-page__course-price_button {
+    /*блочная модель*/
+    width: 250px;
+    height: 50px;
+
+    /*типографика*/
+    font-size: 20px;
+    color: #862d38;
+    font-weight: 600;
+
+    /*оформление*/
+    background-color: #f2e3e5;
+    border: none;
+    box-shadow: 3px 3px #2d2c2a;
+    border-radius: 8px;
+    cursor: pointer;
+
+
+    /*анимация нажатия кнопки*/
+    -webkit-transition:
+        box-shadow 0.4s,
+        -webkit-transform 0.4s,
+        background-color 0.8s;
+    transition:
+        box-shadow 0.4s,
+        transform 0.4s,
+        background-color 0.8s;
+}
+
+.course-page__course-price_button:hover {
+    /*типографика*/
+    color: #2d2c2a;
+    /*оформление*/
+    background-color: #FBF8F7;
+}
+
+.course-page__course-price_button:active {
+    /*цвет фона*/
+    background-color: #FBF8F7;
+    /*тень*/
+    box-shadow: 0px 0px #2D2C2A;
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    transition: 0.1s;
+}
+
+
+
+
+
+.pop-up__contacts-bottom {
+	display: none;
+}
+
+
+/*скрытие pop-up*/
+.pop-up__course-page {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*адаптив планшет*/
+@media (min-width:768px) and (max-width:1024px) {
+
+    /* Ш А П К А*/
+    .main-page__header {
+        align-items: start;
+        padding-top: 1%;
+        height: 50px;
+        row-gap: 0%;
+        column-gap: 60%;
+    }
+
+    /* блок с ссылками в шапке на главной странице */
+    .main-page__header_links-block {
+        /*флекс-контейнер*/
+        display: none;
+    }
+
+
+
+    /* П Р О М О - Б Л О К */
+
+    .main-page__promo_main-h1 {
+        /*размер текста*/
+        font-size: 50px;
+        /*начертание текста*/
+        font-weight: bold;
+    }
+
+    .main-page__promo_main-h2 {
+        /*размер текста*/
+        font-size: 35px;
+    }
+
+    .main-page__promo_main-h5 {
+        /*внешний отступ сверху*/
+        margin-top: 2%;
+        /*ширина*/
+        width: 411px;
+        /*размер текста*/
+        font-size: 14px;
+        /*межстрочный интервал*/
+        line-height: 1.5;
+    }
+
+    .main-page__promo_button-try-f-free {
+        /*ширина*/
+        width: 230px;
+        /*высота*/
+        height: 45px;
+        /*рамка*/
+        border: none;
+        /*скругление углов*/
+        border-radius: 10px;
+        /*цвет текста*/
+        color: #fbf8f7;
+        /*размер текста*/
+        font-size: 14px;
+        /*толщина шрифта*/
+        font-weight: bold;
+        /*выравнивание текста*/
+        text-align: center;
+        /*цвет фона*/
+        background-color: #862d38;
+        /*тень*/
+        box-shadow: 4px 4px #2D2C2A;
+    }
+
+    .main-page__promo_button-more-abt-courses {
+        /*ширина*/
+        width: 200px;
+        /*высота*/
+        height: 45px;
+        /*рамка*/
+        border: none;
+        /*скругление углов*/
+        border-radius: 10px;
+        /*цвет текста*/
+        color: #862D38;
+        /*размер текста*/
+        font-size: 14px;
+        /*толщина шрифта*/
+        font-weight: bold;
+        /*выравнивание текста*/
+        text-align: center;
+        /*цвет фона*/
+        background-color: #F2E3E5;
+        /*тень*/
+        box-shadow: 4px 4px #2D2C2A;
+    }
+
+    .main-page__promo_button-try-f-free:active {
+        /*цвет фона*/
+        background-color: #74262F;
+        /*тень*/
+        box-shadow: 0px 0px #2D2C2A;
+        -webkit-transform: translate(4px, 4px);
+        transform: translate(4px, 4px);
+        transition: 0.1s;
+    }
+
+    .main-page__promo_button-more-abt-courses:hover {
+        /*цвет фона*/
+        background-color: #FBF8F7;
+    }
+
+    .main-page__promo_button-more-abt-courses:active {
+        /*цвет фона*/
+        background-color: #FBF8F7;
+        /*тень*/
+        box-shadow: 0px 0px #2D2C2A;
+
+        -webkit-transform: translate(4px, 4px);
+        transform: translate(4px, 4px);
+        transition: 0.1s;
+    }
+
+
+
+
+    /* П Е Р С П Е К Т И В Ы  1 */
+
+    .main-page__prospects-1 {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 30px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*высота*/
+        height: 630px;
+        /*цвет фона*/
+        background-color: #fbf8f7;
+    }
+
+    .main-page__prospects-1_h3 {
+        /*цвет текста*/
+        color: #2D2C2A;
+        /*размер текста*/
+        font-size: 36px;
+        /*начертание текста*/
+        font-weight: bold;
+        /*выравнивание текста*/
+        text-align: center;
+    }
+
+    .main-page__prospects-1_cards {
+        /*флекс-контейнер*/
+        display: flex;
+        flex-wrap: wrap;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+    }
+
+    .main-page__prospects-1_card {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 10px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали (горизонтали из-за column) */
+        align-items: center;
+        /*ширина*/
+        width: 235px;
+        /*высота*/
+        height: 245px;
+        /*цвет текста*/
+        color: #2D2C2A;
+        /*выравнивание текста*/
+        text-align: center;
+        /*цвет фона*/
+        background-color: #d2e3ea;
+        /*тень*/
+        box-shadow: 4px 4px #2D2C2A;
+    }
+
+    /* анимация 1-ой карточки */
+    .main-page__prospects-1_card-1_animation {
+        transform-origin: 50% 0;
+        transform: rotate(3deg);
+        animation: prospects-1_card-1_animation 1.2s linear;
+        animation-delay: 0s;
+    }
+
+    /*анимация 2-ой карточки*/
+    .main-page__prospects-1_card-2_animation {
+        /*внешние отступы*/
+        margin: 0 0 0 20%;
+        /*анимация*/
+        transform-origin: 50% 0;
+        transform: rotate(-3deg);
+        animation: prospects-1_card-2_animation 1.2s linear;
+        animation-delay: 0.4s;
+    }
+
+    /*анимация 3-ей карточки*/
+    .main-page__prospects-1_card-3_animation {
+        /*внешние отступы*/
+        margin: 5% 0 0 0;
+        transform-origin: 50% 0;
+        transform: rotate(3deg);
+        animation: prospects-1_card-3_animation 1.2s linear;
+        animation-delay: 0.8s;
+
+    }
+
+    .main-page__prospects-1_cards-button {
+        /*ширина*/
+        width: 25px;
+        /*высота*/
+        height: 25px;
+        /*скругление углов*/
+        border-radius: 50%;
+        /*цвет фона*/
+        background-color: #f2e3e5;
+        /*тень*/
+        box-shadow: 2px 2px #2D2C2A;
+        /*внешний отступ сверху*/
+        margin-top: 15px;
+    }
+
+    .main-page__prospects-1_cards-title {
+        /*размер текста*/
+        font-size: 20px;
+        /*начертание текста*/
+        font-weight: bold;
+    }
+
+    .main-page__prospects-1_cards-description {
+        /*размер текста*/
+        font-size: 14px;
+        /*межстрочный интервал*/
+        line-height: 1.5;
+    }
+
+
+
+    /* П Е Р С П Е К Т И В Ы  2 */
+
+    .main-page__prospects-2 {
+        /*высота*/
+        height: 630px;
+        z-index: -1;
+    }
+
+    .main-page__prospects-2_h4 {
+        /*позиционирование*/
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        /*цвет текста*/
+        color: #2D2C2A;
+        /*размер текста*/
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    .main-page__prospects-2_h3 {
+        /*позиционирование*/
+        position: absolute;
+        /*размер текста*/
+        font-size: 35px;
+        /*ширина*/
+        width: 45%;
+    }
+
+
+
+
+
+    /* К Л У Б */
+
+    .main-page__club {
+        /*расстояние между элементами*/
+        gap: 35%;
+        /*высота*/
+        height: 300px;
+    }
+
+    .main-page__club_photo {
+        /*ширина*/
+        width: 237px;
+    }
+
+    .main-page__club_block-figure-p {
+        /*внешние отступы*/
+        margin: 0 60px 0 0;
+    }
+
+    .main-page__club_block-figure-r {
+        /*внешние отступы*/
+        margin: 0 0 0 60px;
+    }
+
+    .main-page__club_text-block {
+        /*расстояние между элементами*/
+        gap: 20px;
+        /*внешние отступы*/
+        margin-bottom: 5%;
+    }
+
+    .main-page__club_text-block_club-caption {
+        /*ширина*/
+        width: 120px;
+        /*высота*/
+        height: 25px;
+        /*скругление углов*/
+        border-radius: 5px;
+        /*размер текста*/
+        font-size: 12px;
+    }
+
+    .main-page__club_text-block_h4 {
+        /*размер текста*/
+        font-size: 28px;
+    }
+
+    .main-page__club_text-block_marked-list {
+        /*размер текста*/
+        font-size: 14px;
+    }
+
+    .main-page__club_text-block_button {
+        /*размер текста*/
+        font-size: 15px;
+    }
+
+
+    /* ПРЕПОДАВАТЕЛИ */
+    .main-page__teachers {
+        /*блочная модель*/
+        padding: 3% 1.5% 1% 1.5%;
+        /*оформление*/
+        background-color: #f2e3e5;
+
+    }
+
+    .main-page__teachers_name {
+        /*типографика*/
+        text-align: center;
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+    .main-page__teachers_cards {
+        /*позиционирование*/
+        position: relative;
+        /*блочная модель*/
+        padding: 2% 7.5%;
+    }
+
+    .main-page__teachers_cards .slick-arrow {
+        /*позиционирование*/
+        position: absolute;
+        top: 50%;
+
+        /*блочная модель*/
+        margin-top: -25px;
+        /*половина от высоты*/
+        width: 50px;
+        height: 50px;
+
+        /*типографика*/
+        font-size: 0;
+        /*оформление*/
+        border: none;
+        background-color: #862d38;
+        border-radius: 50%;
+        box-shadow: 3px 3px #2d2c2a;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    .main-page__teachers_card-item {
+        /*блочная модель*/
+        display: flex;
+        justify-content: center;
+        height: 475px;
+    }
+
+    .main-page__teachers_card {
+        /*блочная модель*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        height: 470px;
+
+        /*типографика*/
+        text-align: left;
+        /*оформление*/
+        background-color: #fbf8f7;
+    }
+
+    .main-page__teachers_photos {
+        /*блочная модель*/
+        height: 60%;
+        width: 100%;
+
+        /*свойство фоновой картинки*/
+        background-size: cover;
+        /*картинка без повторений*/
+        background-repeat: no-repeat;
+    }
+
+    .main-page__teachers_texts {
+        /*блочная модель*/
+        padding: 5% 5%;
+    }
+
+    .main-page__teachers_buttons {
+        /*блочная модель*/
+        padding: 3% 7%;
+        margin-bottom: 5%;
+
+        /*типографика*/
+        font-size: 12px;
+        color: #fbf8f7;
+        font-weight: 600;
+
+        /*оформление*/
+        background-color: #862d38;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 3px 3px rgba(45, 44, 42, 1);
+    }
+
+
+
+
+    /* П Р Е И М У Щ Е С Т В А */
+
+    .main-page__advantages {
+        /*расстояние между элементами*/
+        gap: 5%;
+        /*высота*/
+        height: 600px;
+    }
+
+    .main-page__advantages_title-h3 {
+        /*ширина*/
+        width: 600px;
+        /*размер текста*/
+        font-size: 36px;
+        /*межстрочный интервал*/
+        line-height: 1.3;
+    }
+
+    .main-page__advantages_figures-block {
+        /*расстояние между элементами*/
+        gap: 5px;
+        /*ширина*/
+        width: 90%;
+    }
+
+    .main-page__advantages_figures-block_block-1 {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали (горизонтали из-за column)*/
+        align-items: center;
+    }
+
+    .main-page__advantages_figure {
+        /*ширина*/
+        width: 170px;
+    }
+
+    .main-page__advantages_figure-p {
+        /*позиционирование*/
+        position: absolute;
+        /*перемещение*/
+        transform: translate(-60%, 17%);
+
+        /*анимация*/
+        animation: 20s linear 0s normal none infinite running advantages-rotate-p;
+        -webkit-animation: 20s linear 0s normal none infinite running advantages-rotate-p;
+    }
+
+
+    @keyframes advantages-rotate-p {
+        0% {
+            transform: translate(-60%, 17%) rotate(-90deg);
+        }
+
+        100% {
+            transform: translate(-60%, 17%) rotate(-450deg);
+        }
+    }
+
+    @-webkit-keyframes advantages-rotate-p {
+        0% {
+            transform: translate(-60%, 17%) rotate(-90deg);
+        }
+
+        100% {
+            transform: translate(-60%, 17%) rotate(-450deg);
+        }
+    }
+
+
+    .main-page__advantages_figures-block_block-2 {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали (горизонтали из-за column)*/
+        align-items: center;
+        margin-right: auto;
+    }
+
+    .main-page__advantages_figure-b {
+        /*позиционирование*/
+        position: absolute;
+        /*перемещение*/
+        transform: translate(-40%, -3%);
+
+        /*анимация*/
+        animation: 20s linear 0s normal none infinite running advantages-rotate-b;
+        -webkit-animation: 20s linear 0s normal none infinite running advantages-rotate-b;
+    }
+
+
+
+    .main-page__advantages_figure-w {
+        /*позиционирование*/
+        position: relative;
+        z-index: 1;
+    }
+
+    .main-page__advantages_figures-block_figure-w {
+        /*высота*/
+        height: 222px;
+        /*ширина*/
+        width: 222px;
+        /*задний фон - картинка*/
+        background-image: url(../assets/figure-w.png);
+        /*размер фоновой картинки*/
+        background-size: 170px;
+
+    }
+
+    .main-page__advantages_figures-block_figure-w_text {
+        /*позиционирование*/
+        position: absolute;
+        /*ширина*/
+        width: 150px;
+        /*размер текста*/
+        font-size: 14px;
+    }
+
+
+
+    /* С Е Р Т И Ф И К А Т */
+
+    .main-page__certificate {
+        /*расстояние между элементами*/
+        gap: 5%;
+        /*высота*/
+        height: 400px;
+    }
+
+    .main-page__certificate_text-block {
+        /*расстояние между элементами*/
+        gap: 10%;
+        /*высота*/
+        height: 100%;
+    }
+
+    .main-page__certificate_text-block_h4 {
+        /*ширина*/
+        width: 350px;
+        /*размер текста*/
+        font-size: 28px;
+    }
+
+    .main-page__certificate_text-block_description {
+        /*ширина*/
+        width: 210px;
+        /*размер текста*/
+        font-size: 17px;
+    }
+
+    .main-page__certificate_figures-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали (горизонтали из-за column)*/
+        align-content: center;
+        /*ширина*/
+        width: 222px;
+        /*высота*/
+        height: 222px;
+        /*внешний отступ*/
+        margin-bottom: 2%;
+    }
+
+    .main-page__certificate_certificate-photo {
+        /*позиционирование*/
+        position: absolute;
+        z-index: 10;
+        /*ширина*/
+        width: 170px;
+    }
+
+    .main-page__certificate_figure-r {
+        /*позиционирование*/
+        position: absolute;
+        /*перемещение*/
+        transform: translate(10%, -20%);
+
+        /*анимация*/
+        animation: 20s linear 0s normal none infinite running certificate-rotate-r;
+        -webkit-animation: 20s linear 0s normal none infinite running certificate-rotate-r;
+    }
+
+    .main-page__certificate_figure-w {
+        /*позиционирование*/
+        position: absolute;
+        /*перемещение*/
+        transform: translate(-20%, 30%);
+
+        /*анимация*/
+        animation: 20s linear 0s normal none infinite running certificate-rotate-w;
+        -webkit-animation: 20s linear 0s normal none infinite running certificate-rotate-w;
+    }
+
+    .main-page__certificate_figure {
+        /*ширина*/
+        width: 200px;
+    }
+
+
+
+
+
+    /* КУРСЫ */
+    .main-page__courses {
+        /*блочная модель*/
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 3% 0 5% 0;
+        /*оформление*/
+        background-color: #fbf8f7;
+    }
+
+    .main-page__courses_name {
+        /*типографика*/
+        text-align: center;
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+    .main-page__courses_filters {
+        /*блочная модель*/
+        padding-top: 25px;
+        width: 88%;
+    }
+
+    .main-page__courses_cards {
+        /*блочная модель*/
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 35px;
+        column-gap: 70px;
+        width: 88%;
+        padding-top: 30px;
+    }
+
+
+
+    /* ОТЗЫВЫ */
+    .main-page__feedback {
+        /*блочная модель*/
+        padding: 3% 3%;
+        /*оформление*/
+        background-image: linear-gradient(rgba(45, 44, 42, 0.2), rgba(45, 44, 42, 0.1)),
+            url(../assets/feedback-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+    }
+
+    .main-page__feedback_name {
+        /*типографика*/
+        text-align: center;
+        font-size: 38px;
+        font-weight: 600;
+        color: #fbf8f7;
+    }
+
+    .main-page__feedback_cards {
+        /*позиционирование*/
+        position: relative;
+        /*блочная модель*/
+        padding: 4% 8% 2% 8%;
+    }
+
+    .main-page__feedback_cards .slick-arrow {
+        /*позиционирование*/
+        position: absolute;
+        top: 50%;
+
+        /*блочная модель*/
+        margin-top: -25px;
+        /*половина от высоты*/
+        width: 50px;
+        height: 50px;
+
+        /*типографика*/
+        font-size: 0;
+        /*оформление*/
+        border: none;
+        background-color: #f2e3e5;
+        border-radius: 50%;
+        box-shadow: 3px 3px #2d2c2a;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    .main-page__feedback_review {
+        /*блочная модель*/
+        padding: 22px 15px 32px 15px;
+        width: 250px;
+        height: 206px;
+
+        /*оформление*/
+        background-color: #fbf8f7;
+        box-shadow: 5px 5px #2d2c2a;
+    }
+
+
+
+
+
+    /* FAQ */
+    .main-page__FAQ {
+        /*блочная модель*/
+        padding: 4% 2% 1% 2%;
+        /*оформление*/
+        background-color: #fbf8f7;
+    }
+
+    .main-page__FAQ_name {
+        /*типографика*/
+        text-align: center;
+        font-size: 38px;
+        font-weight: 600;
+    }
+
+    .main-page__FAQ_cards {
+        /*блочная модель*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 3% 0;
+    }
+
+    .main-page__FAQ_card {
+        /*блочная модель*/
+        padding: 15px;
+        width: 78%;
+
+        /*оформление*/
+        background-color: #d2e3ea;
+        box-shadow: 5px 5px #2d2c2a;
+    }
+
+
+
+
+    /* К О Н Т А К Т Ы */
+
+    .main-page__contacts {
+        /*высота*/
+        height: 550px;
+    }
+
+    .main-page__contacts_wave-top {
+        /*позиционирование*/
+        position: absolute;
+        top: 0;
+        /*перемещение*/
+        transform: translateY(-5%);
+    }
+
+    .main-page__contacts_wave-top_img {
+        /*ширина*/
+        width: 100%;
+    }
+
+    .main-page__contacts_text-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 25px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+        /*ширина*/
+        width: 293px;
+        /*высота*/
+        height: 300px;
+        /*выравнивание текста*/
+        text-align: left;
+        /*внутренние отступы*/
+        padding-bottom: 50px;
+    }
+
+    .main-page__contacts_text-block_caption {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*ширина*/
+        width: 237px;
+        /*высота*/
+        height: 42px;
+        /*скругление углов*/
+        border-radius: 8px;
+        /*размер текста*/
+        font-size: 17px;
+    }
+
+    .main-page__contacts_text-block_h3 {
+        /*размер текста*/
+        font-size: 28px;
+        /*толщина шрифта*/
+        font-weight: bold;
+    }
+
+    .main-page__contacts_text-block_email-caption {
+        /*размер текста*/
+        font-size: 20px;
+    }
+
+    .main-page__contacts_socials-icons {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояниме между элементами*/
+        gap: 10px;
+    }
+
+    .main-page__contacts_socials-icon {
+        /*ширина*/
+        width: 40px;
+    }
+
+    .main-page__contacts_form-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояниме между элементами*/
+        gap: 2%;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали*/
+        justify-content: center;
+        /*выравнивание по вертикали (горизонтали из-за column)*/
+        align-items: center;
+        /*ширина*/
+        width: 258px;
+        /*высота*/
+        height: 350px;
+        /*тень*/
+        box-shadow: 4px 4px #2D2C2A;
+    }
+
+    .main-page__contacts_form-block_title {
+        /*размер текста*/
+        font-size: 20px;
+    }
+
+    .main-page__contacts_form-block_forms {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояниме между элементами*/
+        gap: 12px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали*/
+        justify-content: center;
+        /*выравнивание по вертикали (горизонтали из-за column)*/
+        align-items: center;
+    }
+
+    .main-page__contacts_form {
+        /*ширина*/
+        width: 199px;
+        /*высота*/
+        height: 38px;
+        /*рамка*/
+        border: none;
+        /*цвет текста*/
+        color: #2D2C2A;
+        /*цвет фона*/
+        background-color: #FBF8F7;
+        /*тень*/
+        box-shadow: 3px 3px #2D2C2A;
+        /*внутренние отступы*/
+        padding-left: 10px;
+    }
+
+    .main-page__contacts_form-question {
+        /*высота*/
+        height: auto;
+        /*внутренние отступы*/
+        padding: 5px 0 50px 10px;
+    }
+
+    .main-page__contacts_form-button {
+        /*ширина*/
+        width: 205px;
+        /*размер текста*/
+        font-size: 17px;
+    }
+
+    .main-page__contacts_wave-bottom {
+        /*позиционирование*/
+        position: absolute;
+        bottom: 0;
+    }
+
+
+    /* П О Д В А Л */
+
+    .footer {
+        /*позиционирование*/
+        position: relative;
+        padding-top: 30px;
+        /*позиционирование*/
+        z-index: 1;
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по горизонтали*/
+        justify-content: space-around;
+        /*выравнивание по вертикали*/
+        align-items: start;
+        /*высота*/
+        height: 120px;
+    }
+
+    .footer_text-block_rights-top {
+        /*размер текста*/
+        font-size: 12px;
+    }
+
+    .footer_text-block_email {
+        /*позиционирование*/
+        position: relative;
+        top: 10px;
+        /*размер текста*/
+        font-size: 12px;
+    }
+
+    .footer_text-block_logotype {
+        /*позиционирование*/
+        position: relative;
+        top: 40px;
+        /*цвет текста*/
+        color: #6c1622c7;
+        /*размер текста*/
+        font-size: 14px;
+        /*начертание текста*/
+        font-weight: bold;
+    }
+
+    .footer_contacts-block_socials {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по горизонтали*/
+        justify-content: end;
+        /*расстояние между элементами*/
+        gap: 10px;
+    }
+
+    .footer_contacts-block_socials_icon {
+        /*ширина*/
+        width: 25px;
+    }
+
+    .footer_contacts-block_telephone {
+        /*позиционирование*/
+        position: relative;
+        top: 40px;
+        /*цвет текста*/
+        color: #6c1622c7;
+        /*размер текста*/
+        font-size: 12px;
+    }
+
+
+
+
+
+
+
+    /* pop-up */
+
+    .pop-up__content {
+        /*позиционирование*/
+        position: relative;
+        top: 5vh;
+        z-index: 20;
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по горизонтали*/
+        justify-content: space-evenly;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*ширина*/
+        width: 400px;
+        /*высота*/
+        height: 550px;
+        /*тень*/
+        box-shadow: 5px 5px #2D2C2A;
+    }
+
+    .pop-up__cross-button {
+        /*позиционирование*/
+        position: absolute;
+        top: 2%;
+        right: 2%;
+    }
+
+    .pop-up__cross-icon {
+        /*ширина*/
+        width: 25px;
+        /*высота*/
+        height: 25px;
+    }
+
+    .pop-up__text-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*расстояние между элементами*/
+        gap: 14px;
+    }
+
+    .pop-up__title {
+        /*ширина*/
+        width: 320px;
+        /*размер текста*/
+        font-size: 20px;
+        /*выраванивание по центру*/
+        text-align: center;
+    }
+
+    .pop-up__caption {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+        /*расстояние между элементами*/
+        gap: 10px;
+        /*внешние отступы*/
+        margin-top: 5px;
+        /*размер текста*/
+        font-size: 14px;
+    }
+
+    .pop-up__caption_course-name {
+        /*межстрочный интервал*/
+        line-height: 1;
+    }
+
+    .pop-up__description {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по горизонтали*/
+        justify-content: start;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*внутренние отступы*/
+        padding-left: 10px;
+        /*ширина*/
+        width: 320px;
+        /*высота*/
+        height: 84px;
+        /*размер текста*/
+        font-size: 14px;
+        /*тень*/
+        box-shadow: 3px 3px #2D2C2A;
+    }
+
+    .pop-up__course_description {
+        /*межстрочный интервал*/
+        line-height: 1.5;
+    }
+
+    .pop-up__contacts-top {
+        display: none;
+    }
+
+
+    .pop-up__social-icon {
+        /*ширина*/
+        width: 25px;
+    }
+
+
+    .pop-up__form-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояниме между элементами*/
+        gap: 12px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали*/
+        justify-content: center;
+        /*выравнивание по вертикали (горизонтали из-за column)*/
+        align-items: center;
+    }
+
+    .pop-up__course_form-block {
+        /*внешние отступы сверху*/
+        margin-top: 5%;
+    }
+
+    .pop-up__form {
+        /*ширина*/
+        width: 320px;
+        /*высота*/
+        height: 50px;
+        /*внутренние отступы*/
+        padding: 0 0 0 10px;
+        /*рамка*/
+        border: none;
+        /*цвет текста*/
+        color: #2D2C2A;
+        /*цвет фона*/
+        background-color: #FBF8F7;
+        /*тень*/
+        box-shadow: 3px 3px #2D2C2A;
+    }
+
+    .pop-up__form-button {
+        /*внешние отступы сверху*/
+        margin-top: 30px;
+        /*ширина*/
+        width: 329px;
+        /*высота*/
+        height: 55px;
+        /*размер текста*/
+        font-size: 20px;
+        /*тень*/
+        box-shadow: 4px 4px #2D2C2A;
+    }
+
+    .pop-up__course_form-button {
+        /*внешние отступы сверху*/
+        margin-top: 2%;
+    }
+
+    .pop-up__contacts-bottom {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 5px;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*размер текста*/
+        font-size: 14px;
+    }
+
+    .pop-up__course_contacts-bottom {
+        /*внешние отступы*/
+        margin-top: 2%;
+    }
+
+
+
+
+
+    /* СТРАНИЦА КЛУБА*/
+
+    /* ПРОМО-БЛОК */
+
+    .club-page__promo_content {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 50px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*внешний отступ сверху*/
+        margin-top: 20vh;
+        /*ширина*/
+        width: 550px;
+    }
+
+    .club-page__promo_text-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 30px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали*/
+        align-items: start;
+    }
+
+    .club-page__promo_caption {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*ширина*/
+        width: 340px;
+        /*высота*/
+        height: 50px;
+        /*скругление углов*/
+        border-radius: 10px;
+        /*цвет текста*/
+        color: #2D2C2A;
+        /*размер текста*/
+        font-size: 20px;
+        /*толщина шрифта*/
+        font-weight: bold;
+        /*цвет фона*/
+        background-color: #f2e3e5;
+    }
+
+    .club-page__promo_h3 {
+        /*размер текста*/
+        font-size: 35px;
+        /*толщина шрифта*/
+        font-weight: bold;
+    }
+
+    .club-page__promo_price-caption {
+        /*размер текста*/
+        font-size: 25px;
+    }
+
+    .club-page__promo_buttons-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 5%;
+        /*выравнивание по горизонтали*/
+        justify-content: start;
+    }
+
+    .club-page__promo_button {
+        /*ширина*/
+        width: 250px;
+        /*высота*/
+        height: 55px;
+        /*размер текста*/
+        font-size: 20px;
+    }
+
+
+
+    /* ПОДРОБНЕЕ О КЛУБЕ */
+
+    .club-page__club-information {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*высота*/
+        height: 550px;
+    }
+
+    .club-page__club_text-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 30px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*ширина*/
+        width: 500px;
+    }
+
+    .club-page__club_title {
+        /*ширина*/
+        width: 300px;
+        /*размер текста*/
+        font-size: 25px;
+        /*начертание текста*/
+        font-weight: bold;
+        /*межстрочный интервал*/
+        line-height: 1.2;
+    }
+
+    .club-page__club_description {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 20px;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*размер текста*/
+        font-size: 17px;
+        /*межстрочный интервал*/
+        line-height: 1.6;
+    }
+
+    .club-page_small-figure {
+        /*ширина*/
+        width: 30px;
+    }
+
+    .club-page__club_figure-block {
+        /*позиционирование*/
+        position: relative;
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+    }
+
+    .club-page__club_figures-block {
+        display: none;
+    }
+
+    .pop-up__club-request_description {
+        /*высота*/
+        height: 140px;
+    }
+
+    .pop-up__club-request_form-button {
+        /*внешние отступы сверху*/
+        margin-top: 2%;
+    }
+
+    /* ПОДРОБНЕЕ О КУРСЕ */
+
+	.course-page__course-information_caption {
+		/*размер текста*/
+		font-size: 20px;
+	}
+
+	.club-page_course-content {
+		/*высота*/
+		height: 680px;
+	}
+
+	.course-page__course-content_h3 {
+		/*размер текста*/
+		font-size: 30px;
+	}
+
+	.course-page__course-content_card {
+		/*ширина*/
+		width: 220px;
+		/*высота*/
+		height: 220px;
+	}
+
+	.course-page__course-content_description {
+		/*ширина*/
+		width: 200px;
+		/*размер текста*/
+		font-size: 20px;
+	}
+
+	.main-page__prospects-1_h3 {
+		/*размер текста*/
+		font-size: 30px;
+	}
+
+
+	/* стоимость обучения */
+	.course-page__course-price_block {
+		/*флекс-контейнер*/
+		display: flex;
+		/*расстояние между элементами*/
+		gap: 10%;
+		/*выравнивание в столбец*/
+		flex-direction: column;
+		/*выравнивание по горизонтали*/
+		justify-content: center;
+		/*выравнивание по вертикали*/
+		align-items: center;
+		/*высота*/
+		height: 800px;
+		/*цвет фона*/
+		background-color: #FBF8F7
+	}
+
+	.course-page__course-price_cards {
+		/*флекс-контейнер*/
+		display: flex;
+		/*перенос элементов*/
+		flex-wrap: wrap;
+		/*выравнивание по горизонтали*/
+		justify-content: center;
+		/*выравнивание по вертикали*/
+		align-items: center;
+		/*расстояние между элементами*/
+		gap: 30px;
+	}
+
+	.course-page__courses_card {
+		/*флекс-контейнер*/
+		display: flex;
+		/*расстояние между элементами*/
+		gap: 5%;
+		/*ширина*/
+		width: 270px;
+		/*высота*/
+		height: 270px;
+		/*внутренние отступы*/
+		padding: 13px;
+		/*тень*/
+		box-shadow: 5px 5px #2d2c2a;
+	}
+
+	.course-page__course-price_title {
+		/*размер текста*/
+		font-size: 30px;
+	}
+
+	.course-page__course-price_month {
+		/*размер текста*/
+		font-size: 25px;
+		/*начертание текста*/
+		font-weight: bold;
+	}
+
+	.course-page__course-price_price {
+		/*размер текста*/
+		font-size: 30px;
+		/*начертание текста*/
+		font-weight: bold;
+	}
+
+
+	.course-page__course-price_button {
+		/*блочная модель*/
+		width: 250px;
+		height: 50px;
+
+		/*типографика*/
+		font-size: 20px;
+		color: #862d38;
+		font-weight: 600;
+
+		/*оформление*/
+		background-color: #f2e3e5;
+		border: none;
+		box-shadow: 4px 4px #2d2c2a;
+		border-radius: 8px;
+		cursor: pointer;
+
+
+		/*анимация нажатия кнопки*/
+		-webkit-transition:
+			box-shadow 0.4s,
+			-webkit-transform 0.4s,
+			background-color 0.8s;
+		transition:
+			box-shadow 0.4s,
+			transform 0.4s,
+			background-color 0.8s;
+	}
+
+	.course-page__course-price_button:active {
+		/*цвет фона*/
+		background-color: #FBF8F7;
+		/*тень*/
+		box-shadow: 0px 0px #2D2C2A;
+		-webkit-transform: translate(4px, 4px);
+		transform: translate(4px, 4px);
+		transition: 0.1s;
+	}
+}
+
+
+
+
+/*адаптив телефон*/
+@media (min-width:375px) and (max-width:425px) {
+
+
+
+    /* Ш А П К А*/
+    .main-page__header {
+        align-items: start;
+        padding-top: 2%;
+        height: 50px;
+        row-gap: 0%;
+        column-gap: 30%;
+    }
+
+    /* блок с ссылками в шапке на главной странице */
+    .main-page__header_links-block {
+        /*флекс-контейнер*/
+        display: none;
+    }
+
+    /* логотип в шапке главной страницы */
+    .main-page__header_logotype {
+        /*размер текста*/
+        font-size: 40px;
+    }
+
+    .main-page__header_links-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        padding: 4% 0;
+
+        background-color: #fbf8f7;
+    }
+
+    .main-page__header_link-mobile {
+        font-size: 20px;
+
+        color: #862d38;
+    }
+
+    .main-page__header_links-mobile-none {
+        display: none;
+    }
+
+    /* П Р О М О - Б Л О К */
+
+    .main-page__promo_main-h1 {
+        /*размер текста*/
+        font-size: 30px;
+        /*начертание текста*/
+        font-weight: bold;
+    }
+
+    .main-page__promo_main-h2 {
+        /*размер текста*/
+        font-size: 24px;
+    }
+
+    .main-page__promo_main-h5 {
+        /*внешний отступ сверху*/
+        margin-top: 2%;
+        /*ширина*/
+        width: 303px;
+        /*размер текста*/
+        font-size: 15px;
+        /*межстрочный интервал*/
+        line-height: 1.5;
+    }
+
+    .main-page__promo_button-try-f-free {
+        /*ширина*/
+        width: 230px;
+        /*высота*/
+        height: 45px;
+        /*рамка*/
+        border: none;
+        /*скругление углов*/
+        border-radius: 10px;
+        /*цвет текста*/
+        color: #fbf8f7;
+        /*размер текста*/
+        font-size: 14px;
+        /*толщина шрифта*/
+        font-weight: bold;
+        /*выравнивание текста*/
+        text-align: center;
+        /*цвет фона*/
+        background-color: #862d38;
+        /*тень*/
+        box-shadow: 4px 4px #2D2C2A;
+    }
+
+    .main-page__promo_button-more-abt-courses {
+        /*ширина*/
+        width: 200px;
+        /*высота*/
+        height: 45px;
+        /*рамка*/
+        border: none;
+        /*скругление углов*/
+        border-radius: 10px;
+        /*цвет текста*/
+        color: #862D38;
+        /*размер текста*/
+        font-size: 14px;
+        /*толщина шрифта*/
+        font-weight: bold;
+        /*выравнивание текста*/
+        text-align: center;
+        /*цвет фона*/
+        background-color: #F2E3E5;
+        /*тень*/
+        box-shadow: 4px 4px #2D2C2A;
+    }
+
+
+    .main-page__promo_button-try-f-free:active {
+        /*цвет фона*/
+        background-color: #74262F;
+        /*тень*/
+        box-shadow: 0px 0px #2D2C2A;
+        -webkit-transform: translate(4px, 4px);
+        transform: translate(4px, 4px);
+        transition: 0.1s;
+    }
+
+    .main-page__promo_button-more-abt-courses:active {
+        /*цвет фона*/
+        background-color: #FBF8F7;
+        /*тень*/
+        box-shadow: 0px 0px #2D2C2A;
+
+        -webkit-transform: translate(4px, 4px);
+        transform: translate(4px, 4px);
+        transition: 0.1s;
+
+    }
+
+
+    /* П Е Р С П Е К Т И В Ы  1 */
+
+    .main-page__prospects-1 {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 30px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*высота*/
+        height: 800px;
+        /*цвет фона*/
+        background-color: #fbf8f7;
+    }
+
+    .main-page__prospects-1_h3 {
+        /*цвет текста*/
+        color: #2D2C2A;
+        /*размер текста*/
+        font-size: 30px;
+        /*начертание текста*/
+        font-weight: bold;
+        /*выравнивание текста*/
+        text-align: center;
+    }
+
+    .main-page__prospects-1_cards {
+        /*флекс-контейнер*/
+        display: flex;
+        flex-wrap: wrap;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+    }
+
+    .main-page__prospects-1_card {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 10px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали (горизонтали из-за column) */
+        align-items: center;
+        /*ширина*/
+        width: 200px;
+        /*высота*/
+        height: 200px;
+        /*цвет текста*/
+        color: #2D2C2A;
+        /*выравнивание текста*/
+        text-align: center;
+        /*цвет фона*/
+        background-color: #d2e3ea;
+        /*тень*/
+        box-shadow: 4px 4px #2D2C2A;
+    }
+
+    /* анимация 1-ой карточки */
+    .main-page__prospects-1_card-1_animation {
+        transform-origin: 50% 0;
+        transform: rotate(3deg);
+        animation: prospects-1_card-1_animation 1.2s linear;
+        animation-delay: 0s;
+    }
+
+    /*анимация 2-ой карточки*/
+    .main-page__prospects-1_card-2_animation {
+        /*внешние отступы*/
+        margin: 10% 0 5% 0;
+        /*анимация*/
+        transform-origin: 50% 0;
+        transform: rotate(-3deg);
+        animation: prospects-1_card-2_animation 1.2s linear;
+        animation-delay: 0.4s;
+    }
+
+    /*анимация 3-ей карточки*/
+    .main-page__prospects-1_card-3_animation {
+        /*внешние отступы*/
+        margin: 5% 0 0 0;
+        transform-origin: 50% 0;
+        transform: rotate(3deg);
+        animation: prospects-1_card-3_animation 1.2s linear;
+        animation-delay: 0.8s;
+
+    }
+
+    .main-page__prospects-1_cards-button {
+        /*ширина*/
+        width: 20px;
+        /*высота*/
+        height: 20px;
+        /*скругление углов*/
+        border-radius: 50%;
+        /*цвет фона*/
+        background-color: #f2e3e5;
+        /*тень*/
+        box-shadow: 2px 2px #2D2C2A;
+        /*внешний отступ сверху*/
+        margin-top: 15px;
+    }
+
+    .main-page__prospects-1_cards-title {
+        /*размер текста*/
+        font-size: 20px;
+        /*начертание текста*/
+        font-weight: bold;
+    }
+
+    .main-page__prospects-1_cards-description {
+        /*размер текста*/
+        font-size: 12px;
+        /*межстрочный интервал*/
+        line-height: 1.5;
+    }
+
+
+    /* П Е Р С П Е К Т И В Ы  2 */
+
+    .main-page__prospects-2 {
+        /*высота*/
+        height: 400px;
+    }
+
+    .main-page__prospects-2_h4 {
+        /*позиционирование*/
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        /*цвет текста*/
+        color: #2D2C2A;
+        /*размер текста*/
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .main-page__prospects-2_h3 {
+        /*позиционирование*/
+        position: absolute;
+        /*размер текста*/
+        font-size: 30px;
+        /*ширина*/
+        width: 80%;
+    }
+
+    .main-page__prospects-2_wave-top {
+        transform: translateY(-0.0000001);
+    }
+
+
+    /* К Л У Б */
+
+    .main-page__club {
+        flex-wrap: wrap;
+        /*расстояние между элементами*/
+        gap: 35%;
+        /*высота*/
+        height: 500px;
+    }
+
+
+    .main-page__club_photos-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали (горизонтали из-за column)*/
+        align-items: center;
+        /*внутренние отстпуы*/
+        padding-right: 35%;
+        /*высота*/
+        height: auto;
+    }
+
+    .main-page__club_photo {
+        /*ширина*/
+        width: 163px;
+    }
+
+    .main-page__club_block-figure-p {
+        /*внешние отступы*/
+        margin: 0 40px 0 0;
+    }
+
+    .main-page__club_block-figure-r {
+        /*внешние отступы*/
+        margin: 0 0 0 40px;
+    }
+
+    .main-page__club_text-block {
+        /*расстояние между элементами*/
+        gap: 20px;
+        /*внешние отступы*/
+        margin-bottom: 5%;
+    }
+
+    .main-page__club_text-block_club-caption {
+        /*ширина*/
+        width: 120px;
+        /*высота*/
+        height: 25px;
+        /*скругление углов*/
+        border-radius: 5px;
+        /*размер текста*/
+        font-size: 12px;
+    }
+
+    .main-page__club_text-block_h4 {
+        /*размер текста*/
+        font-size: 24px;
+    }
+
+    .main-page__club_text-block_marked-list {
+        /*размер текста*/
+        font-size: 14px;
+    }
+
+    .main-page__club_text-block_button {
+        margin-left: 10%;
+        margin-right: 10%;
+        /*размер текста*/
+        font-size: 15px;
+    }
+
+
+    /* ПРЕПОДАВАТЕЛИ */
+    .main-page__teachers {
+        /*блочная модель*/
+        padding: 7% 1.5% 1% 1.5%;
+        /*оформление*/
+        background-color: #f2e3e5;
+    }
+
+    .main-page__teachers_name {
+        /*типографика*/
+        text-align: center;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .main-page__teachers_cards {
+        /*позиционирование*/
+        position: relative;
+        /*блочная модель*/
+        padding: 6% 12%;
+    }
+
+    .main-page__teachers_cards .slick-arrow {
+        /*позиционирование*/
+        position: absolute;
+        top: 50%;
+
+        /*блочная модель*/
+        margin-top: -20px;
+        /*половина от высоты*/
+        width: 40px;
+        height: 40px;
+
+        /*типографика*/
+        font-size: 0;
+        /*оформление*/
+        border: none;
+        background-color: #862d38;
+        border-radius: 50%;
+        box-shadow: 3px 3px #2d2c2a;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    .main-page__teachers_card-item {
+        /*блочная модель*/
+        display: flex;
+        justify-content: center;
+        height: 445px;
+    }
+
+    .main-page__teachers_card {
+        /*блочная модель*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        height: 440px;
+
+        /*типографика*/
+        text-align: left;
+        /*оформление*/
+        background-color: #fbf8f7;
+    }
+
+    .main-page__teachers_photos {
+        /*блочная модель*/
+        height: 60%;
+        width: 100%;
+
+        /*свойство фоновой картинки*/
+        background-size: cover;
+        /*картинка без повторений*/
+        background-repeat: no-repeat;
+    }
+
+    .main-page__teachers_texts {
+        /*блочная модель*/
+        padding: 5% 5%;
+    }
+
+    .main-page__teachers_buttons {
+        /*блочная модель*/
+        padding: 3% 6%;
+        margin-bottom: 5%;
+
+        /*типографика*/
+        font-size: 11px;
+        color: #fbf8f7;
+        font-weight: 600;
+
+        /*оформление*/
+        background-color: #862d38;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 3px 3px rgba(45, 44, 42, 1);
+    }
+
+
+
+    /* П Р Е И М У Щ Е С Т В А */
+
+    .main-page__advantages {
+        /*расстояние между элементами*/
+        gap: 5px;
+        /*выравание по горизонтали (вертикали из-за column)*/
+        justify-content: normal;
+        /*высота*/
+        height: 1020px;
+
+    }
+
+    .main-page__advantages_title-h3 {
+        /*внешние отступы*/
+        margin-top: 5%;
+        /*ширина*/
+        width: 100%;
+        /*размер текста*/
+        font-size: 24px;
+        /*межстрочный интервал*/
+        line-height: 1.3;
+    }
+
+    .main-page__advantages_figures-block {
+        /*позиционирование*/
+        position: relative;
+        /*расстояние между элементами*/
+        gap: 5px;
+        /*ширина*/
+        width: 90%;
+        /*высота*/
+        height: 72%;
+    }
+
+    .main-page__advantages_figures-block_container-1 {
+        /*позиционирование*/
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .main-page__advantages_figures-block_container-2 {
+        /*позиционирование*/
+        position: absolute;
+        top: 20%;
+        right: 0;
+    }
+
+    .main-page__advantages_figures-block_container-3 {
+        /*позиционирование*/
+        position: absolute;
+        top: 40%;
+        left: 0;
+    }
+
+    .main-page__advantages_figures-block_container-4 {
+        /*позиционирование*/
+        position: absolute;
+        top: 60%;
+        right: 0;
+    }
+
+    .main-page__advantages_figures-block_container-5 {
+        /*позиционирование*/
+        position: absolute;
+        top: 80%;
+        left: 0;
+    }
+
+    .main-page__advantages_figures-block_container-6 {
+        /*позиционирование*/
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+
+    .main-page__advantages_figures-block_block-1 {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали (горизонтали из-за column)*/
+        align-items: center;
+        /*внешний отступ*/
+        margin-left: auto;
+    }
+
+    .main-page__advantages_figure {
+        /*ширина*/
+        width: 160px;
+    }
+
+    .main-page__advantages_figure-p {
+        /*позиционирование*/
+        position: absolute;
+        /*перемещение*/
+        transform: translate(-60%, 17%);
+
+        /*анимация*/
+        animation: 20s linear 0s normal none infinite running advantages-rotate-p;
+        -webkit-animation: 20s linear 0s normal none infinite running advantages-rotate-p;
+    }
+
+
+    @keyframes advantages-rotate-p {
+        0% {
+            transform: translate(-60%, 17%) rotate(-90deg);
+        }
+
+        100% {
+            transform: translate(-60%, 17%) rotate(-450deg);
+        }
+    }
+
+    @-webkit-keyframes advantages-rotate-p {
+        0% {
+            transform: translate(-60%, 17%) rotate(-90deg);
+        }
+
+        100% {
+            transform: translate(-60%, 17%) rotate(-450deg);
+        }
+    }
+
+    .main-page__advantages_figures-block_block-2 {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали (горизонтали из-за column)*/
+        align-items: center;
+        /*внешний отступ*/
+        margin-right: auto;
+    }
+
+    .main-page__advantages_figure-b {
+        /*позиционирование*/
+        position: absolute;
+        /*перемещение*/
+        transform: translate(-40%, -3%);
+
+        /*анимация*/
+        animation: 20s linear 0s normal none infinite running advantages-rotate-b;
+        -webkit-animation: 20s linear 0s normal none infinite running advantages-rotate-b;
+    }
+
+    .main-page__advantages_figure-w {
+        /*позиционирование*/
+        position: relative;
+        z-index: 1;
+    }
+
+    .main-page__advantages_figures-block_figure-w {
+        /*высота*/
+        height: 200px;
+        /*ширина*/
+        width: 200px;
+        /*задний фон - картинка*/
+        background-image: url(../assets/figure-w.png);
+        /*размер фоновой картинки*/
+        background-size: 160px;
+
+    }
+
+    .main-page__advantages_figures-block_figure-w_text {
+        /*позиционирование*/
+        position: absolute;
+        /*ширина*/
+        width: 150px;
+        /*размер текста*/
+        font-size: 14px;
+    }
+
+
+
+    /* С Е Р Т И Ф И К А Т */
+
+    .main-page__certificate {
+        /*перенос элементов*/
+        flex-wrap: wrap;
+        /*расстояние между элементами*/
+        gap: 2%;
+        /*высота*/
+        height: 500px;
+    }
+
+    .main-page__certificate_text-block {
+        flex-wrap: wrap;
+        align-items: center;
+        /*расстояние между элементами*/
+        gap: 2%;
+        /*высота*/
+        height: 110px;
+        /*выравнивание по вертикали*/
+        justify-content: space-between;
+        /*внешний отступ*/
+        margin-top: 2%;
+    }
+
+    .main-page__certificate_text-block_h4 {
+        /*ширина*/
+        width: 300px;
+        /*размер текста*/
+        font-size: 24px;
+        /*выравнивание текста*/
+        text-align: center;
+    }
+
+    .main-page__certificate_text-block_description {
+        /*ширина*/
+        width: 200px;
+        /*размер текста*/
+        font-size: 14px;
+        /*выравнивание текста*/
+        text-align: center;
+        /*межстрочный интервал*/
+        line-height: 1.6;
+    }
+
+    .main-page__certificate_figures-block {
+        /*флекс-контейнер*/
+        display: flex;
+        flex-wrap: wrap;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали (горизонтали из-за column)*/
+        align-content: start;
+        /*ширина*/
+        width: 180px;
+        /*высота*/
+        height: 200px;
+        /*внешний отступ*/
+        margin-top: 0;
+        margin-left: 10%;
+        margin-bottom: 0;
+    }
+
+    .main-page__certificate_button-top {
+        display: none;
+    }
+
+    .main-page__certificate_button-bottom {
+        display: block;
+    }
+
+    .main-page__certificate_certificate-photo {
+        /*позиционирование*/
+        position: absolute;
+        z-index: 10;
+        /*ширина*/
+        width: 135px;
+    }
+
+    .main-page__certificate_figure-r {
+        /*позиционирование*/
+        position: absolute;
+        /*перемещение*/
+        transform: translate(10%, -20%);
+
+        /*анимация*/
+        animation: 20s linear 0s normal none infinite running certificate-rotate-r;
+        -webkit-animation: 20s linear 0s normal none infinite running certificate-rotate-r;
+    }
+
+    .main-page__certificate_figure-w {
+        /*позиционирование*/
+        position: absolute;
+        /*перемещение*/
+        transform: translate(-20%, 30%);
+
+        /*анимация*/
+        animation: 20s linear 0s normal none infinite running certificate-rotate-w;
+        -webkit-animation: 20s linear 0s normal none infinite running certificate-rotate-w;
+    }
+
+    .main-page__certificate_figure {
+        /*ширина*/
+        width: 160px;
+    }
+
+
+
+    /* КУРСЫ */
+    .main-page__courses {
+        /*блочная модель*/
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 7% 0 5% 0;
+        /*оформление*/
+        background-color: #fbf8f7;
+    }
+
+    .main-page__courses_name {
+        /*типографика*/
+        text-align: center;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .main-page__courses_filters {
+        /*блочная модель*/
+        padding-top: 25px;
+        width: 88%;
+    }
+
+    .main-page__courses_cards {
+        /*блочная модель*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 35px;
+        column-gap: 70px;
+        width: 88%;
+        padding-top: 10px;
+    }
+
+    .main-page__courses_filters-buttons {
+        /*блочная модель*/
+        display: flex;
+        gap: 5%;
+        padding: 5px 0 15px 0;
+    }
+
+    .main-page__courses_filters-button {
+        /*блочная модель*/
+        width: 50%;
+        height: 45px;
+
+        /*типографика*/
+        font-size: 14px;
+        color: #862d38;
+        font-weight: 600;
+
+        /*оформление*/
+        background-color: #f2e3e5;
+        border: none;
+        box-shadow: 3px 3px #2d2c2a;
+        border-radius: 8px;
+        cursor: pointer;
+        /*анимации*/
+        transition: all 0.8s;
+    }
+
+    .main-page__courses_filters-radios {
+        /*блочная модель*/
+        display: flex;
+        gap: 0px;
+    }
+
+    .main-page__courses_filters-radio {
+        /*блочная модель*/
+        display: flex;
+        align-items: start;
+        gap: 5px;
+
+        /*типографика*/
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .main-page__courses_filters-radio-1 {
+        /*блочная модель*/
+        padding-right: 0;
+        width: 120px;
+    }
+
+    .main-page__courses_filters-radio-2 {
+        /*блочная модель*/
+        padding-right: 0;
+        width: 120px;
+    }
+
+
+    /* ОТЗЫВЫ */
+    .main-page__feedback {
+        /*блочная модель*/
+        padding: 5% 0.5%;
+        /*оформление*/
+        background-image: linear-gradient(rgba(45, 44, 42, 0.2), rgba(45, 44, 42, 0.1)),
+            url(../assets/feedback-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+
+    }
+
+    .main-page__feedback_name {
+        /*типографика*/
+        text-align: center;
+        font-size: 32px;
+        font-weight: 600;
+        color: #fbf8f7;
+    }
+
+    .main-page__feedback_cards {
+        /*позиционирование*/
+        position: relative;
+        /*блочная модель*/
+        padding: 6% 12% 1% 12%;
+    }
+
+    .main-page__feedback_cards .slick-arrow {
+        /*позиционирование*/
+        position: absolute;
+        top: 50%;
+
+        /*блочная модель*/
+        margin-top: -21px;
+        /*половина от высоты*/
+        width: 42px;
+        height: 42px;
+
+        /*типографика*/
+        font-size: 0;
+        /*оформление*/
+        border: none;
+        background-color: #f2e3e5;
+        border-radius: 50%;
+        box-shadow: 3px 3px #2d2c2a;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    .main-page__feedback_items {
+        /*блочная модель*/
+        display: flex;
+        justify-content: center;
+        height: 285px;
+    }
+
+    .main-page__feedback_review {
+        /*блочная модель*/
+        padding: 12px 15px 32px 15px;
+        width: 240px;
+        height: 216px;
+
+        /*оформление*/
+        background-color: #fbf8f7;
+        box-shadow: 5px 5px #2d2c2a;
+    }
+
+    .main-page__feedback_names {
+        /*блочная модель*/
+        padding-top: 5px;
+        /*типографика*/
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.55;
+    }
+
+    .main-page__feedback_comments-1 {
+        /*блочная модель*/
+        margin-top: 9px;
+        /*типографика*/
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .main-page__feedback_comments-2 {
+        /*блочная модель*/
+        margin-top: 8px;
+        /*типографика*/
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+
+
+    /* FAQ */
+    .main-page__FAQ {
+        /*блочная модель*/
+        padding: 5% 2% 1% 2%;
+        /*оформление*/
+        background-color: #fbf8f7;
+    }
+
+    .main-page__FAQ_name {
+        /*типографика*/
+        text-align: center;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .main-page__FAQ_cards {
+        /*блочная модель*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 6% 0;
+    }
+
+    .main-page__FAQ_card {
+        /*блочная модель*/
+        padding: 15px;
+        width: 88%;
+
+        /*оформление*/
+        background-color: #d2e3ea;
+        box-shadow: 5px 5px #2d2c2a;
+    }
+
+    .main-page__FAQ_question {
+        /*типографика*/
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.35;
+        width: 85%;
+    }
+
+    .main-page__FAQ_button {
+        /*блочная модель*/
+        width: 40px;
+        height: 40px;
+
+        /*оформление*/
+        border: none;
+        background-color: #f2e3e5;
+        border-radius: 50%;
+        box-shadow: 3px 3px #2d2c2a;
+    }
+
+
+
+    /* К О Н Т А К Т Ы */
+
+    .main-page__contacts {
+        flex-wrap: wrap;
+        /*высота*/
+        height: 600px;
+    }
+
+    .main-page__contacts_wave-top {
+        /*позиционирование*/
+        position: absolute;
+        top: 0;
+        /*перемещение*/
+        transform: translateY(-4%);
+    }
+
+    .main-page__contacts_wave-top_img {
+        /*ширина*/
+        width: 100%;
+    }
+
+    .main-page__contacts_text-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 20px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+        align-items: center;
+        /*ширина*/
+        width: 360px;
+        /*высота*/
+        height: 192px;
+        /*выравнивание текста*/
+        text-align: left;
+        /*внутренние отступы*/
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+
+    .main-page__contacts_text-block_caption {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*ширина*/
+        width: 203px;
+        /*высота*/
+        height: 36px;
+        /*скругление углов*/
+        border-radius: 8px;
+        /*размер текста*/
+        font-size: 14px;
+    }
+
+    .main-page__contacts_text-block_h3 {
+        /*размер текста*/
+        font-size: 30px;
+        /*толщина шрифта*/
+        font-weight: bold;
+    }
+
+    .main-page__contacts_text-block_email-caption {
+        /*размер текста*/
+        font-size: 24px;
+    }
+
+    .main-page__contacts_socials-icons {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояниме между элементами*/
+        gap: 15px;
+    }
+
+    .main-page__contacts_socials-icon {
+        /*ширина*/
+        width: 40px;
+    }
+
+    .main-page__contacts_form-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояниме между элементами*/
+        gap: 2%;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали*/
+        justify-content: center;
+        /*выравнивание по вертикали (горизонтали из-за column)*/
+        align-items: center;
+        /*ширина*/
+        width: 280px;
+        /*высота*/
+        height: 330px;
+        /*тень*/
+        box-shadow: 3px 3px #2D2C2A;
+        /*внутренние отступы*/
+        margin-bottom: 40px;
+    }
+
+    .main-page__contacts_form-block_title {
+        /*размер текста*/
+        font-size: 20px;
+    }
+
+    .main-page__contacts_form-block_forms {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояниме между элементами*/
+        gap: 10px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали*/
+        justify-content: center;
+        /*выравнивание по вертикали (горизонтали из-за column)*/
+        align-items: center;
+    }
+
+    .main-page__contacts_form {
+        /*ширина*/
+        width: 231px;
+        /*высота*/
+        height: 34px;
+        /*рамка*/
+        border: none;
+        /*цвет текста*/
+        color: #2D2C2A;
+        /*цвет фона*/
+        background-color: #FBF8F7;
+        /*тень*/
+        box-shadow: 3px 3px #2D2C2A;
+        /*внутренние отступы*/
+        padding-left: 10px;
+    }
+
+    .main-page__contacts_form-question {
+        /*высота*/
+        height: auto;
+        /*внутренние отступы*/
+        padding: 5px 0 50px 10px;
+    }
+
+    .main-page__contacts_form-button {
+        /*ширина*/
+        width: 238px;
+        /*высота*/
+        height: 40px;
+        /*размер текста*/
+        font-size: 15px;
+    }
+
+    .main-page__contacts_wave-bottom {
+        /*позиционирование*/
+        position: absolute;
+        bottom: 0;
+    }
+
+
+    /* П О Д В А Л */
+
+    .footer {
+        /*позиционирование*/
+        position: relative;
+        padding-top: 25px;
+        /*позиционирование*/
+        z-index: 1;
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по горизонтали*/
+        justify-content: space-around;
+        /*выравнивание по вертикали*/
+        align-items: start;
+        /*высота*/
+        height: 120px;
+    }
+
+    .footer_text-block_rights-top {
+        display: none;
+    }
+
+    .footer_text-block_email {
+        /*позиционирование*/
+        position: relative;
+        /*размер текста*/
+        font-size: 14px;
+    }
+
+    .footer_text-block_logotype {
+        /*позиционирование*/
+        position: relative;
+        top: 30px;
+        /*цвет текста*/
+        color: #6c1622c7;
+        /*размер текста*/
+        font-size: 14px;
+        /*начертание текста*/
+        font-weight: bold;
+    }
+
+    .footer_contacts-block_socials {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по горизонтали*/
+        justify-content: end;
+        /*расстояние между элементами*/
+        gap: 15px;
+    }
+
+    .footer_contacts-block_socials_icon {
+        /*ширина*/
+        width: 30px;
+    }
+
+    .footer_contacts-block_telephone {
+        /*позиционирование*/
+        position: relative;
+        top: 20px;
+        /*цвет текста*/
+        color: #6c1622c7;
+        /*размер текста*/
+        font-size: 14px;
+    }
+
+    .footer_text-block_rights-bottom {
+        /*позиционирование*/
+        position: absolute;
+        bottom: 10px;
+        /*флекс-контейнер*/
+        display: block;
+        /*размер текста*/
+        font-size: 12px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* pop-up */
+
+    .pop-up__content {
+        /*позиционирование*/
+        position: relative;
+        top: 5vh;
+        z-index: 20;
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 10px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по горизонтали*/
+        justify-content: space-evenly;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*ширина*/
+        width: 300px;
+        /*высота*/
+        height: 460px;
+        /*тень*/
+        box-shadow: 5px 5px #2D2C2A;
+    }
+
+    .pop-up__cross-button {
+        /*позиционирование*/
+        position: absolute;
+        top: 2%;
+        right: 5%;
+
+    }
+
+    .pop-up__cross-icon {
+        /*ширина*/
+        width: 25px;
+        /*высота*/
+        height: 25px;
+    }
+
+    .pop-up__text-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*расстояние между элементами*/
+        gap: 14px;
+    }
+
+    .pop-up__title {
+        /*ширина*/
+        width: 290px;
+        /*размер текста*/
+        font-size: 17px;
+        /*выраванивание по центру*/
+        text-align: center;
+    }
+
+
+    .pop-up__caption {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+        /*расстояние между элементами*/
+        gap: 10px;
+        /*внешние отступы*/
+        margin-top: 5px;
+        /*размер текста*/
+        font-size: 12px;
+    }
+
+    .pop-up__caption_course-name {
+        /*размер текста*/
+        font-size: 15px;
+        /*межстрочный интервал*/
+        line-height: 1;
+    }
+
+    .pop-up__description {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по горизонтали*/
+        justify-content: start;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*внутренние отступы*/
+        padding-left: 10px;
+        /*ширина*/
+        width: 260px;
+        /*высота*/
+        height: 84px;
+        /*размер текста*/
+        font-size: 12px;
+        /*тень*/
+        box-shadow: 3px 3px #2D2C2A;
+    }
+
+
+    .pop-up__contacts-top {
+        display: none;
+    }
+
+
+    .pop-up__social-icon {
+        /*ширина*/
+        width: 25px;
+    }
+
+
+    .pop-up__form-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояниме между элементами*/
+        gap: 12px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали*/
+        justify-content: center;
+        /*выравнивание по вертикали (горизонтали из-за column)*/
+        align-items: center;
+    }
+
+    .pop-up__form {
+        /*ширина*/
+        width: 260px;
+        /*высота*/
+        height: 40px;
+        /*внутренние отступы*/
+        padding: 0 0 0 10px;
+        /*рамка*/
+        border: none;
+        /*цвет текста*/
+        color: #2D2C2A;
+        /*цвет фона*/
+        background-color: #FBF8F7;
+        /*тень*/
+        box-shadow: 3px 3px #2D2C2A;
+    }
+
+    .pop-up__form-button {
+        /*внешние отступы сверху*/
+        margin-top: 10px;
+        /*ширина*/
+        width: 269px;
+        /*высота*/
+        height: 50px;
+        /*размер текста*/
+        font-size: 17px;
+        /*тень*/
+        box-shadow: 4px 4px #2D2C2A;
+    }
+
+    .pop-up__course_form-button {
+        /*внешние отступы сверху*/
+        margin-top: 2%;
+    }
+
+    .pop-up__contacts-bottom {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 5px;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*размер текста*/
+        font-size: 12px;
+    }
+
+
+
+
+
+    /* СТРАНИЦА КЛУБА*/
+
+    /* ПРОМО-БЛОК */
+
+    .club-page__promo_content {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 50px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*внешний отступ сверху*/
+        margin-top: 20vh;
+        /*ширина*/
+        width: 295px;
+    }
+
+    .club-page__promo_text-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 30px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        text-align: center;
+    }
+
+    .club-page__promo_caption {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*ширина*/
+        width: 280px;
+        /*высота*/
+        height: 35px;
+        /*скругление углов*/
+        border-radius: 8px;
+        /*цвет текста*/
+        color: #2D2C2A;
+        /*размер текста*/
+        font-size: 17px;
+        /*толщина шрифта*/
+        font-weight: bold;
+        /*цвет фона*/
+        background-color: #f2e3e5;
+    }
+
+    .club-page__promo_h3 {
+        /*размер текста*/
+        font-size: 20px;
+        /*толщина шрифта*/
+        font-weight: bold;
+        color: #fbf8f7;
+    }
+
+    .club-page__promo_price-caption {
+        /*размер текста*/
+        font-size: 20px;
+        color: #fbf8f7;
+    }
+
+    .club-page__promo_buttons-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 30px;
+        /*перенос элементов*/
+        flex-wrap: wrap;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+    }
+
+    .club-page__promo_button {
+        /*ширина*/
+        width: 220px;
+        /*высота*/
+        height: 45px;
+        /*размер текста*/
+        font-size: 15px;
+    }
+
+
+
+
+    /* ПОДРОБНЕЕ О КЛУБЕ */
+
+    .club-page__club-information {
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*высота*/
+        height: 480px;
+    }
+
+    .club-page__club_text-block {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 17px;
+        /*выравнивание в столбец*/
+        flex-direction: column;
+        /*ширина*/
+        width: 280px;
+
+    }
+
+    .club-page__club_title {
+        /*ширина*/
+        width: 240px;
+        /*размер текста*/
+        font-size: 20px;
+        /*начертание текста*/
+        font-weight: bold;
+        /*межстрочный интервал*/
+        line-height: 1.2;
+    }
+
+    .club-page__club_description {
+        /*флекс-контейнер*/
+        display: flex;
+        /*расстояние между элементами*/
+        gap: 20px;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*размер текста*/
+        font-size: 14px;
+        /*межстрочный интервал*/
+        line-height: 1.6;
+    }
+
+    .club-page_small-figure {
+        /*ширина*/
+        width: 30px;
+    }
+
+    .club-page__club_figure-block {
+        /*позиционирование*/
+        position: relative;
+        /*флекс-контейнер*/
+        display: flex;
+        /*выравнивание по вертикали*/
+        align-items: center;
+        /*выравнивание по горизонтали*/
+        justify-content: center;
+    }
+
+    .club-page__club_figures-block {
+        display: none;
+    }
+
+    .pop-up__club-request_title {
+        /*ширина*/
+        width: 200px;
+    }
+
+    .pop-up__club-request_description {
+        /*высота*/
+        height: 120px;
+    }
+
+    .pop-up__club-request_form-button {
+        /*внешние отступы сверху*/
+        margin-top: 2%;
+    }
+
+
+
+    /* ПОДРОБНЕЕ О КУРСЕ */
+
+	.course-page__course-information {
+		/*высота*/
+		height: 450px;
+	}
+
+	.course-page__course-information_title {
+		/*ширина*/
+		width: auto;
+		/*размер текста*/
+		font-size: 24px;
+	}
+
+	.course_page__course_title {
+		/*ширина*/
+		width: 300px;
+		/*размер текста*/
+		font-size: 28px;
+	}
+
+	.course-page__course-information_caption {
+		/*внутренние отступы*/
+		padding: 0 30px;
+		/*размер текста*/
+		font-size: 17px;
+		/*межстрочный интервал*/
+		line-height: 1.5;
+		/*выравнивание текста*/
+		text-align: center;
+	}
+
+
+	.course-page__course-content_block {
+		/*высота*/
+		height: 880px;
+	}
+
+
+
+	.course-page_course-content {
+		/*высота*/
+		height: 850px;
+	}
+
+	.course-page__course-content_h3 {
+		/*размер текста*/
+		font-size: 28px;
+	}
+
+	.course-page__course-content_card {
+		/*ширина*/
+		width: 220px;
+		/*высота*/
+		height: 220px;
+	}
+
+	.course-page__course-content_description {
+		/*ширина*/
+		width: 200px;
+		/*размер текста*/
+		font-size: 20px;
+	}
+
+	/*сертификат*/
+	.main-page__certificate {
+		/*высота*/
+		height: 550px;
+	}
+
+	.main-page__certificate_text-block {
+		/*высота*/
+		height: 140px;
+	}
+
+	.main-page__certificate_text-block_h4 {
+		/*ширина*/
+		width: 370px;
+		/*размер текста*/
+		font-size: 28px;
+	}
+
+	.main-page__certificate_text-block_description {
+		/*ширина*/
+		width: 300px;
+		/*размер текста*/
+		font-size: 17px;
+	}
+
+
+
+
+	/* стоимость обучения */
+	.course-page__course-price_block {
+		/*флекс-контейнер*/
+		display: flex;
+		/*расстояние между элементами*/
+		gap: 3%;
+		/*выравнивание в столбец*/
+		flex-direction: column;
+		/*выравнивание по горизонтали*/
+		justify-content: center;
+		/*выравнивание по вертикали*/
+		align-items: center;
+		/*высота*/
+		height: 1000px;
+		/*цвет фона*/
+		background-color: #FBF8F7
+	}
+
+	.course-page__course-price_cards {
+		/*флекс-контейнер*/
+		display: flex;
+		/*перенос элементов*/
+		flex-wrap: wrap;
+		/*выравнивание по горизонтали*/
+		justify-content: center;
+		/*выравнивание по вертикали*/
+		align-items: center;
+		/*расстояние между элементами*/
+		gap: 25px;
+	}
+
+	.course-page__courses_card {
+		/*флекс-контейнер*/
+		display: flex;
+		/*расстояние между элементами*/
+		gap: 5%;
+		/*ширина*/
+		width: 260px;
+		/*высота*/
+		height: 250px;
+		/*внутренние отступы*/
+		padding: 13px;
+		/*тень*/
+		box-shadow: 5px 5px #2d2c2a;
+	}
+
+	.course-page__course-price_title {
+		/*размер текста*/
+		font-size: 30px;
+	}
+
+	.course-page__course-price_month {
+		/*размер текста*/
+		font-size: 25px;
+		/*начертание текста*/
+		font-weight: bold;
+	}
+
+	.course-page__course-price_price {
+		/*размер текста*/
+		font-size: 30px;
+		/*начертание текста*/
+		font-weight: bold;
+	}
+
+
+	.course-page__course-price_button {
+		/*блочная модель*/
+		width: 250px;
+		height: 50px;
+
+		/*типографика*/
+		font-size: 20px;
+		color: #862d38;
+		font-weight: 600;
+
+		/*оформление*/
+		background-color: #f2e3e5;
+		border: none;
+		box-shadow: 4px 4px #2d2c2a;
+		border-radius: 8px;
+		cursor: pointer;
+
+
+		/*анимация нажатия кнопки*/
+		-webkit-transition:
+			box-shadow 0.4s,
+			-webkit-transform 0.4s,
+			background-color 0.8s;
+		transition:
+			box-shadow 0.4s,
+			transform 0.4s,
+			background-color 0.8s;
+	}
+
+	.course-page__course-price_button:active {
+		/*цвет фона*/
+		background-color: #FBF8F7;
+		/*тень*/
+		box-shadow: 0px 0px #2D2C2A;
+		-webkit-transform: translate(4px, 4px);
+		transform: translate(4px, 4px);
+		transition: 0.1s;
+	}
+}
